@@ -25,14 +25,9 @@ const getLocaleUrl = (targetLocale: Locale) => {
           <img src="/assets/icons/boscdex_logo.png" alt="Boscdex Logo" class="w-full h-full object-cover" />
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <span class="font-pixel text-2xl font-bold tracking-wider text-ink block leading-none">
-              BOSCDEX
-            </span>
-            <span class="px-1.5 py-0.2 bg-forest text-white font-pixel text-[10px] font-bold rounded">
-              75
-            </span>
-          </div>
+          <span class="font-pixel text-2xl font-bold tracking-wider text-ink block leading-none">
+            BOSCDEX
+          </span>
           <span class="text-[11px] font-pixel font-bold text-forest uppercase tracking-widest block mt-0.5">
             {locale === 'ca' ? 'Guia Micològica' : locale === 'es' ? 'Guía Micológica' : 'Mycological Dex'}
           </span>
@@ -50,9 +45,6 @@ const getLocaleUrl = (targetLocale: Locale) => {
         <a href="#safety" class="font-pixel text-sm font-bold text-arcade-red hover:underline transition-colors flex items-center gap-1.5">
           <span class="w-2 h-2 rounded-full bg-arcade-red animate-ping inline-block"></span>
           {t.nav.safety}
-        </a>
-        <a href="#ios-guide" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
-          🍏 {t.nav.iosGuide}
         </a>
         <a href="#docs" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
           {t.nav.docs}
@@ -139,9 +131,6 @@ const getLocaleUrl = (targetLocale: Locale) => {
     </a>
     <a href="#safety" class="block font-pixel font-bold text-base text-arcade-red py-1">
       ⚠️ {t.nav.safety}
-    </a>
-    <a href="#ios-guide" class="block font-pixel font-bold text-base text-ink py-1">
-      🍏 {t.nav.iosGuide}
     </a>
     <a href="#docs" class="block font-pixel font-bold text-base text-ink py-1">
       {t.nav.docs}

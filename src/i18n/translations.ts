@@ -142,7 +142,7 @@ export const translations: Record<Locale, Translation> = {
     },
     nav: {
       features: 'Funcions',
-      species: 'Catàleg (75)',
+      species: 'Catàleg',
       safety: 'Seguretat',
       iosGuide: 'Guia iOS',
       docs: 'Docs & IA',
@@ -242,11 +242,11 @@ export const translations: Record<Locale, Translation> = {
       pairsSubtitle: '28 parelles catalogades amb claus diagnòstiques directes',
     },
     dex: {
-      title: 'El Catàleg Boscdex (75 Bolets)',
+      title: 'El Catàleg Boscdex',
       subtitle: 'Descobreix la col·lecció completa dels 75 bolets autòctons catalogats a l\'aplicació',
       searchPlaceholder: 'Cerca per nom comú o científic (ex: Rovelló, Boletus, Amanita)...',
       filters: {
-        all: 'Tots els bolets (75)',
+        all: 'Tots els bolets',
         edible: 'Comestibles',
         gourmet: 'Gourmet ⭐',
         toxic: 'Tòxics / Mortals ☠️',
@@ -344,7 +344,7 @@ export const translations: Record<Locale, Translation> = {
     },
     nav: {
       features: 'Funciones',
-      species: 'Catálogo (75)',
+      species: 'Catálogo',
       safety: 'Seguridad',
       iosGuide: 'Guía iOS',
       docs: 'Docs & IA',
@@ -444,11 +444,11 @@ export const translations: Record<Locale, Translation> = {
       pairsSubtitle: '28 parejas catalogadas con claves diagnósticas directas',
     },
     dex: {
-      title: 'El Catálogo Boscdex (75 Setas)',
+      title: 'El Catálogo Boscdex',
       subtitle: 'Descubre la colección completa de las 75 setas autóctonas catalogadas en la aplicación',
       searchPlaceholder: 'Buscar por nombre común o científico (ej: Níscalo, Boletus, Amanita)...',
       filters: {
-        all: 'Todas las setas (75)',
+        all: 'Todas las setas',
         edible: 'Comestibles',
         gourmet: 'Gourmet ⭐',
         toxic: 'Tóxicas / Mortales ☠️',
@@ -546,7 +546,7 @@ export const translations: Record<Locale, Translation> = {
     },
     nav: {
       features: 'Features',
-      species: 'Dex Catalog (75)',
+      species: 'Catalog',
       safety: 'Safety Gate',
       iosGuide: 'iOS Guide',
       docs: 'Docs & ML',
@@ -646,11 +646,11 @@ export const translations: Record<Locale, Translation> = {
       pairsSubtitle: '28 cataloged dangerous pairs with instant diagnostic traits',
     },
     dex: {
-      title: 'The Boscdex Catalog (75 Species)',
+      title: 'The Boscdex Catalog',
       subtitle: 'Explore the complete collection of all 75 wild mushroom species cataloged in the app',
       searchPlaceholder: 'Search by vernacular or scientific name (e.g. Porcini, Chanterelle, Amanita)...',
       filters: {
-        all: 'All Mushrooms (75)',
+        all: 'All Mushrooms',
         edible: 'Edibles',
         gourmet: 'Gourmet ⭐',
         toxic: 'Toxic / Lethal ☠️',
