@@ -1,0 +1,1127 @@
+[
+  {
+    "id": "lactarius_deliciosus",
+    "dexNumber": 1,
+    "scientificName": "Lactarius deliciosus",
+    "name": {
+      "ca": "Rovelló / Pinetell",
+      "es": "Níscalo / Robellón",
+      "en": "Saffron Milk Cap"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1800m",
+    "capDescription": "De 5 a 15 cm, convex que s\\'aplana i s\\'embuta amb l\\'edat, ataronjat amb zones concèntriques més clares i fosques. Marge enrotllat inicialment. Es taca de verd en envellir o fer-se malbé."
+  },
+  {
+    "id": "boletus_edulis",
+    "dexNumber": 2,
+    "scientificName": "Boletus edulis",
+    "name": {
+      "ca": "Cep",
+      "es": "Boleto / Hongo calabaza",
+      "en": "Penny Bun / Porcini"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "600m – 1800m",
+    "capDescription": "Gran (5-25 cm o més), de color marró clar a fosc, amb un marge sovint més clar, gairebé blanc en exemplars joves. Superfície llisa, lleugerament viscosa en temps humit."
+  },
+  {
+    "id": "cantharellus_cibarius",
+    "dexNumber": 3,
+    "scientificName": "Cantharellus cibarius",
+    "name": {
+      "ca": "Rossinyol",
+      "es": "Rebozuelo / Chantarela",
+      "en": "Golden Chanterelle"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[6,7,8,9,10,11]",
+    "altitude": "200m – 1500m",
+    "capDescription": "Petit a mitjà (3-10 cm), tot de color groc rovell d\\'ou uniforme. Carn ferma. Té forma d\\'embut o copa de vores sinuoses i irregulars."
+  },
+  {
+    "id": "amanita_caesarea",
+    "dexNumber": 4,
+    "scientificName": "Amanita caesarea",
+    "name": {
+      "ca": "Ou de reig",
+      "es": "Oronja / Huevo de rey",
+      "en": "Caesar\\"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "200m – 1000m",
+    "capDescription": "Neix d\\'una volva blanca tancada (\"ou\"). Obert fa 8-20 cm, llis, de color ataronjat intens o vermell ataronjat, sense restes de volva (sense esquames blanques). Marge estriat."
+  },
+  {
+    "id": "craterellus_cornucopioides",
+    "dexNumber": 5,
+    "scientificName": "Craterellus cornucopioides",
+    "name": {
+      "ca": "Trompeta de la mort",
+      "es": "Trompeta de los muertos",
+      "en": "Black Trumpet / Horn of Plenty"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "400m – 1400m",
+    "capDescription": "En forma d\\'embut o cornucòpia profundament buida fins a la base. Color de gris fosc a negre negrós. Marges ondulats."
+  },
+  {
+    "id": "macrolepiota_procera",
+    "dexNumber": 6,
+    "scientificName": "Macrolepiota procera",
+    "name": {
+      "ca": "Apagallums",
+      "es": "Parasol",
+      "en": "Parasol Mushroom"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "100m – 1200m",
+    "capDescription": "Molt gran, fins a 30 cm de diàmetre. Inicialment ovoidal (forma de baqueta de tambor), després s\\'obre com un para-sol. De fons clar, cobert d\\'esquames concèntriques fosques. Gran mamelló central fosc (umbó)."
+  },
+  {
+    "id": "tricholoma_terreum",
+    "dexNumber": 7,
+    "scientificName": "Tricholoma terreum",
+    "name": {
+      "ca": "Fredolic",
+      "es": "Negrilla",
+      "en": "Grey Knight"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "400m – 1600m",
+    "capDescription": "De 3 a 8 cm, convex, sec, amb la superfície coberta de petites esquames fibril·loses que li donen un aspecte vellutat, de color gris ratolí a gris negrós."
+  },
+  {
+    "id": "calocybe_gambosa",
+    "dexNumber": 8,
+    "scientificName": "Calocybe gambosa",
+    "name": {
+      "ca": "Moixernó",
+      "es": "Seta de San Jorge / Perrechico",
+      "en": "St. George\\"
+    },
+    "edibility": "comestible",
+    "rarityTier": "rar",
+    "fruitingSeason": "[4,5,6]",
+    "altitude": "600m – 1400m",
+    "capDescription": "De 5 a 12 cm, carnós, mat i sec. Color de blanc a crema suau o gairebé camussa. Marge sovint molt enrotllat cap a sota quan és jove."
+  },
+  {
+    "id": "pleurotus_ostreatus",
+    "dexNumber": 9,
+    "scientificName": "Pleurotus ostreatus",
+    "name": {
+      "ca": "Gírgola",
+      "es": "Seta de ostra",
+      "en": "Oyster Mushroom"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12,1,2]",
+    "altitude": "0m – 1200m",
+    "capDescription": "Gran (5-20 cm), forma de conquilla o ostra, carnós. Color molt variable, des de blau negrós o gris plom al principi fins a gris clar o marronós. Superfície llisa."
+  },
+  {
+    "id": "hydnum_repandum",
+    "dexNumber": 10,
+    "scientificName": "Hydnum repandum",
+    "name": {
+      "ca": "Llengua de bou",
+      "es": "Lengua de vaca",
+      "en": "Wood Hedgehog / Sweet Tooth"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1400m",
+    "capDescription": "De 5 a 15 cm, irregular i lobulat, de color blanquinós, crema a taronja esblaimat o rosat ataronjat. Superfície vellutada seca."
+  },
+  {
+    "id": "hygrophorus_latitabundus",
+    "dexNumber": 11,
+    "scientificName": "Hygrophorus latitabundus",
+    "name": {
+      "ca": "Llenega negra",
+      "es": "Higróforo negro / Llanega negra",
+      "en": "Black Slimy Cap"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "400m – 1200m",
+    "capDescription": "Lleugerament bombat, molt i molt viscós en estat fresc i humit, marró-gris o fosc cap al centre i marge blanquinós. Fins a 15 cm."
+  },
+  {
+    "id": "craterellus_lutescens",
+    "dexNumber": 12,
+    "scientificName": "Craterellus lutescens",
+    "name": {
+      "ca": "Camagroc",
+      "es": "Trompeta amarilla / Rebozuelo anaranjado",
+      "en": "Yellow Foot / Trumpet Chanterelle"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "400m – 1600m",
+    "capDescription": "Molt prim, ondulat en embut de petit format (2-5 cm), esquamós de color bru-gris o bru fosc a sobre."
+  },
+  {
+    "id": "suillus_luteus",
+    "dexNumber": 13,
+    "scientificName": "Suillus luteus",
+    "name": {
+      "ca": "Llenegot",
+      "es": "Boleto anillado / Baboso",
+      "en": "Slippery Jack"
+    },
+    "edibility": "sense_valor",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1800m",
+    "capDescription": "Hemisfèric i després pla, de color marró-xocolata a groc-marró fosc. En temps humit és completament viscós i enganxós (la cutícula es pot pelar fàcilment)."
+  },
+  {
+    "id": "russula_cyanoxantha",
+    "dexNumber": 14,
+    "scientificName": "Russula cyanoxantha",
+    "name": {
+      "ca": "Llora verda",
+      "es": "Carbonera",
+      "en": "Charcoal Burner"
+    },
+    "edibility": "sense_valor",
+    "rarityTier": "comu",
+    "fruitingSeason": "[6,7,8,9,10]",
+    "altitude": "200m – 1400m",
+    "capDescription": "Molt variable, en diferents tons clapejats de violeta, rosa-lila i sobretot verd lila, blavós (mai roig viu pur). Fins a 15 cm."
+  },
+  {
+    "id": "amanita_muscaria",
+    "dexNumber": 15,
+    "scientificName": "Amanita muscaria",
+    "name": {
+      "ca": "Reig bord",
+      "es": "Matamoscas",
+      "en": "Fly Agaric"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1800m",
+    "capDescription": "Molt vistós i icònic. Color vermell intens amb múltiples \"esquames\" blanques sobre la superfície (són restes del vel universal)."
+  },
+  {
+    "id": "omphalotus_olearius",
+    "dexNumber": 16,
+    "scientificName": "Omphalotus olearius",
+    "name": {
+      "ca": "Gírgola d\\",
+      "es": "Seta de olivo",
+      "en": "Jack-o\\"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "0m – 800m",
+    "capDescription": "Carnós, de color ataronjat rogenc o bru daurat molt bonic, de vegades infundibuliforme (en forma d\\'embut), neix en flotes atapeïdes a les soques."
+  },
+  {
+    "id": "entoloma_sinuatum",
+    "dexNumber": 17,
+    "scientificName": "Entoloma sinuatum",
+    "name": {
+      "ca": "Pèrfid",
+      "es": "Pérfida / Engañosa",
+      "en": "Livid Pinkgill"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "200m – 1200m",
+    "capDescription": "Molt robust (fins a 18 cm). De color blanc groguenc o crema cendrós (color camussa), llis, lluent en temps sec."
+  },
+  {
+    "id": "amanita_phalloides",
+    "dexNumber": 18,
+    "scientificName": "Amanita phalloides",
+    "name": {
+      "ca": "Farinera borda",
+      "es": "Oronja verde / Cicuta verde",
+      "en": "Death Cap"
+    },
+    "edibility": "mortal",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "200m – 1400m",
+    "capDescription": "Llis, amb forma d\\'escut suau, normalment d\\'un groc-oliva clar, gris-verd o marró verdós, amb unes venes finíssimes (fibril·les radials). Sense esquames blanques."
+  },
+  {
+    "id": "amanita_verna",
+    "dexNumber": 19,
+    "scientificName": "Amanita verna",
+    "name": {
+      "ca": "Cicuta blanca",
+      "es": "Oronja blanca / Cicuta blanca",
+      "en": "Fool\\"
+    },
+    "edibility": "mortal",
+    "rarityTier": "rar",
+    "fruitingSeason": "[4,5,6]",
+    "altitude": "200m – 1000m",
+    "capDescription": "Superfície totalment llisa d\\'un color blanc pur o lleugeríssim crema pàl·lid, fins i tot a la meitat, sovint molt simètric. 5-10 cm."
+  },
+  {
+    "id": "cortinarius_orellanus",
+    "dexNumber": 20,
+    "scientificName": "Cortinarius orellanus",
+    "name": {
+      "ca": "Cortinari de muntanya",
+      "es": "Cortinario de montaña",
+      "en": "Fool\\"
+    },
+    "edibility": "mortal",
+    "rarityTier": "rar",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1400m",
+    "capDescription": "Barret campanulat o convex de color terrós rogenc a taronja foc fosc, sec, densament fibril·lós o envellutat en observar-lo de prop."
+  },
+  {
+    "id": "lactarius_sanguifluus",
+    "dexNumber": 21,
+    "scientificName": "Lactarius sanguifluus",
+    "name": {
+      "ca": "Vinader / Rovelló de sang",
+      "es": "Níscalo de sangre",
+      "en": "Bloody Milk Cap"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "300m – 1600m",
+    "capDescription": "De 5 a 12 cm, convex i després deprimit, de color ocre ataronjat amb tons vinosos o porpres i taques verdes en envellir."
+  },
+  {
+    "id": "chroogomphus_rutilus",
+    "dexNumber": 22,
+    "scientificName": "Chroogomphus rutilus",
+    "name": {
+      "ca": "Cama de perdiu",
+      "es": "Pata de perdiz / Piquigrueso",
+      "en": "Copper Spike / Pine Spike"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "400m – 1800m",
+    "capDescription": "De 4 a 10 cm, convex o cònic amb un mamelló central molt marcat (umbonat). Cutícula llisa, viscosa amb la humitat i lluent en eixut, de color marró coure o rogenc amb reflexos vinosos."
+  },
+  {
+    "id": "marasmius_oreades",
+    "dexNumber": 23,
+    "scientificName": "Marasmius oreades",
+    "name": {
+      "ca": "Carrereta / Cama-sec",
+      "es": "Senderuela / Carrerilla",
+      "en": "Fairy Ring Champignon / Scotch Bonnet"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[5,6,9,10,11]",
+    "altitude": "300m – 2000m",
+    "capDescription": "De 2 a 6 cm, campanulat que passa a convex i aplanat amb un mamelló central obtús. Color crema clar a ocre canyella, més pàl·lid en eixut (higròfan). Marge lleugerament estriat per transparència."
+  },
+  {
+    "id": "lactarius_chrysorrheus",
+    "dexNumber": 24,
+    "scientificName": "Lactarius chrysorrheus",
+    "name": {
+      "ca": "Lleterola de llet groga / Fals rovelló",
+      "es": "Falso níscalo / Lactario de leche dorada",
+      "en": "Yellow-drop Milkcap"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "100m – 1400m",
+    "capDescription": "De 4 a 10 cm, convex i després deprimit, de color salmó pàl·lid o ocre rosat amb zones concèntriques de taques més fosques. Marge enrotllat inicialment."
+  },
+  {
+    "id": "lepista_nuda",
+    "dexNumber": 25,
+    "scientificName": "Lepista nuda",
+    "name": {
+      "ca": "Pé blau / Pua blava",
+      "es": "Pie azul",
+      "en": "Wood Blewit"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "200m – 1600m",
+    "capDescription": "De 6 a 15 cm, convex i després aplanat amb marge ondulat i enrotllat. Color blau violaci o lila viu de jove, que vira a marró bru o lilaci apagat amb l\\'edat. Cutícula llisa i separable."
+  },
+  {
+    "id": "rubroboletus_satanas",
+    "dexNumber": 26,
+    "scientificName": "Rubroboletus satanas",
+    "name": {
+      "ca": "Mataparent de Satanàs",
+      "es": "Boleto de Satanás",
+      "en": "Satan\\"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[7,8,9,10]",
+    "altitude": "100m – 1100m",
+    "capDescription": "Molt voluminós (10 a 30 cm), robust i massís. Cutícula llisa, de color blanc guix, gris perla o blanquinós brut, mai marró fosc com el cep."
+  },
+  {
+    "id": "russula_virescens",
+    "dexNumber": 27,
+    "scientificName": "Russula virescens",
+    "name": {
+      "ca": "Palometa / Llora pigada",
+      "es": "Gibelurdiñ / Seta de cura",
+      "en": "Green-cracked Brittlegill"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[6,7,8,9,10]",
+    "altitude": "100m – 1300m",
+    "capDescription": "De 5 a 15 cm, globós i després convex-deprimit. Cutícula seca, de color verd grisenc a verd maragda pàl·lid, típicament clivellada o esquamosa formant un mosaic de petites crostes poligonals."
+  },
+  {
+    "id": "hygrophorus_eburneus",
+    "dexNumber": 28,
+    "scientificName": "Hygrophorus eburneus",
+    "name": {
+      "ca": "Llenega blanca / Mocosa blanca",
+      "es": "Higróforo blanco / Llanega blanca",
+      "en": "Ivory Woodwax"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "300m – 1500m",
+    "capDescription": "De 4 a 10 cm, convex a lleugerament umbonat, tot de color blanc ivori lluent. Cutícula molt mucosa i viscosa en temps humit, lluent quan s\\'asseca."
+  },
+  {
+    "id": "tricholoma_pardinum",
+    "dexNumber": 29,
+    "scientificName": "Tricholoma pardinum",
+    "name": {
+      "ca": "Fredolic bord / Griset bord",
+      "es": "Tricoloma atigrado / Negrilla bastarda",
+      "en": "Poison Knight / Tiger Tricholoma"
+    },
+    "edibility": "toxic",
+    "rarityTier": "rar",
+    "fruitingSeason": "[8,9,10,11]",
+    "altitude": "800m – 1900m",
+    "capDescription": "Molt robust i carnós (6 a 15 cm), campanulat i després aplanat. Cutícula de color gris platejat a gris fosc, coberta d\\'esquames concèntriques amples i fosques disposades com teules (aspecte tigrat o de lleopard)."
+  },
+  {
+    "id": "morchella_esculenta",
+    "dexNumber": 30,
+    "scientificName": "Morchella esculenta",
+    "name": {
+      "ca": "Múrgola / Rabassola",
+      "es": "Colmenilla / Morchela común",
+      "en": "Morel / Yellow Morel"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[3,4,5]",
+    "altitude": "200m – 1600m",
+    "capDescription": "De 4 a 10 cm d\\'alçada, ovoide o arrodonit, buit per dins. Superfície formada per alvèols o cel·les profundes i irregulars (com una bresca d\\'abelles), de color groc ocre, beix o mel pàl·lid."
+  },
+  {
+    "id": "agaricus_campestris",
+    "dexNumber": 31,
+    "scientificName": "Agaricus campestris",
+    "name": {
+      "ca": "Xampinyó silvestre / Guisana",
+      "es": "Champiñón silvestre / Campestre",
+      "en": "Field Mushroom / Meadow Mushroom"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[5,6,9,10,11]",
+    "altitude": "50m – 1600m",
+    "capDescription": "De 4 a 10 cm, convex a aplanat, carnós, sec i blanc o blanquinós sedós, de vegades amb fines esquames ocre clar al centre."
+  },
+  {
+    "id": "agaricus_xanthodermus",
+    "dexNumber": 32,
+    "scientificName": "Agaricus xanthodermus",
+    "name": {
+      "ca": "Xampinyó groguenc / Xampinyó pudent",
+      "es": "Champiñón amarilleante / Nocivo",
+      "en": "Yellow-staining Mushroom"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[5,6,9,10,11]",
+    "altitude": "50m – 1400m",
+    "capDescription": "De 5 a 12 cm, inicialment trapezoidal o troncocònic (pla per dalt), després convex. Blanc a grisaci clar, que es taca d\\'un groc crom intens al tacte o fregament."
+  },
+  {
+    "id": "psathyrella_candolleana",
+    "dexNumber": 33,
+    "scientificName": "Candolleomyces candolleanus",
+    "name": {
+      "ca": "Candol·lea / Psatirel·la de Candolle",
+      "es": "Psatirela de Candolle",
+      "en": "Candolle\\"
+    },
+    "edibility": "sense_valor",
+    "rarityTier": "comu",
+    "fruitingSeason": "[4,5,6,9,10,11]",
+    "altitude": "50m – 1500m",
+    "capDescription": "De 3 a 7 cm, fràgil i prim, hemisfèric i després aplanat amb umbó obtús. Higròfan, de color mel pàl·lid, ocre clar o blanquinós en assecar-se. Marge guarnit de flocs i restes blanques del vel parcial festonat."
+  },
+  {
+    "id": "suillus_granulatus",
+    "dexNumber": 34,
+    "scientificName": "Suillus granulatus",
+    "name": {
+      "ca": "Molleric clapat / Pinetell de pi blanc",
+      "es": "Boleto granulado / Hongo de pino",
+      "en": "Weeping Bolete"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[5,6,9,10,11,12]",
+    "altitude": "50m – 1200m",
+    "capDescription": "De 5 a 12 cm, convex i després aplanat. Cutícula molt viscosa en temps humit, fàcilment separable de la carn, de color bru groguenc, vermellós o canyella càlid."
+  },
+  {
+    "id": "hygrophorus_russula",
+    "dexNumber": 35,
+    "scientificName": "Hygrophorus russula",
+    "name": {
+      "ca": "Carlet / Escarlet",
+      "es": "Higróforo escarlata / Carleta",
+      "en": "False Chanterelle / Russula Woodwax"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "100m – 1100m",
+    "capDescription": "De 5 a 15 cm, molt massís i carnós, convex i després aplanat. Color rosa vinós a vermell púrpura amb taques i vetes vinoses sobre fons blanquinós. Cutícula una mica viscosa en humit."
+  },
+  {
+    "id": "boletus_aereus",
+    "dexNumber": 36,
+    "scientificName": "Boletus aereus",
+    "name": {
+      "ca": "Cep negre / Sureny fosc",
+      "es": "Boleto negro / Hongo negro",
+      "en": "Dark Bolete / Queen Bolete"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[6,7,9,10,11]",
+    "altitude": "100m – 1000m",
+    "capDescription": "De 7 a 20 cm, molt ferm i compacte, hemisfèric i després convex. Cutícula vellutada, de color bru xocolata molt fosc, bronzejat o gairebé negre, sovint amb clapes més clares de color ocre o coure."
+  },
+  {
+    "id": "coprinus_comatus",
+    "dexNumber": 37,
+    "scientificName": "Coprinus comatus",
+    "name": {
+      "ca": "Bolet de tinta / Braguer de vaca",
+      "es": "Coprino barbudo / Barbuda",
+      "en": "Shaggy Mane / Lawyer\\"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[4,5,9,10,11]",
+    "altitude": "50m – 1700m",
+    "capDescription": "De 5 a 15 cm d\\'alçada, cilíndric o acampanat estret. Superfície blanca coberta d\\'esquames blanes, fibroses i llanoses corbades cap amunt. En madurar, el marge es desfà ràpidament en un líquid negre com la tinta (deliquescència)."
+  },
+  {
+    "id": "lactarius_torminosus",
+    "dexNumber": 38,
+    "scientificName": "Lactarius torminosus",
+    "name": {
+      "ca": "Cabra / Rovelló bord",
+      "es": "Falso níscalo peludo / Lactario de abedul",
+      "en": "Woolly Milkcap"
+    },
+    "edibility": "toxic",
+    "rarityTier": "rar",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "400m – 1800m",
+    "capDescription": "De 4 a 12 cm, deprimit al centre amb marge molt enrotllat i cobert d\\'una llana o borra abundant de pèls llanosos blanquinosos (barbat). Color rosa maduixa o salmó amb cercles concèntrics més foscos."
+  },
+  {
+    "id": "amanita_pantherina",
+    "dexNumber": 39,
+    "scientificName": "Amanita pantherina",
+    "name": {
+      "ca": "Pantera / Reig bord pigat",
+      "es": "Amanita pantera",
+      "en": "Panther Cap"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[6,7,9,10,11]",
+    "altitude": "100m – 1500m",
+    "capDescription": "De 5 a 12 cm, hemisfèric i després convex-estès, de color bru avellana, bru ocre o terrós fosc, amb el marge clarament estriat. Cobert de nombroses berrugues piramidals o escates petites d\\'un blanc pur i farinós."
+  },
+  {
+    "id": "gyromitra_esculenta",
+    "dexNumber": 40,
+    "scientificName": "Gyromitra esculenta",
+    "name": {
+      "ca": "Bolet de greix / Falsa múrgola",
+      "es": "Bonete / Falsa colmenilla",
+      "en": "False Morel / Brain Mushroom"
+    },
+    "edibility": "mortal",
+    "rarityTier": "rar",
+    "fruitingSeason": "[3,4,5]",
+    "altitude": "600m – 2000m",
+    "capDescription": "De 4 a 10 cm, arrodonit, irregular, buit, amb la superfície fortament plegada i ondulada en lòbuls sinuosos que recorden les circumvolucions d\\'un cervell humà. Color bru vermellós fosc, castany o xocolata."
+  },
+  {
+    "id": "hygrophorus_personii",
+    "dexNumber": 41,
+    "scientificName": "Hygrophorus personii",
+    "name": {
+      "ca": "Llenega d\\",
+      "es": "Higróforo de encina / Llanega de encina",
+      "en": "Dark Woodwax / Oak Woodwax"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "100m – 1200m",
+    "capDescription": "De 4 a 10 cm, de convex a aplanat amb un umbó central més fosc. Cutícula molt viscosa en temps humit, de color bru olivaci a marró castany."
+  },
+  {
+    "id": "pleurotus_eryngii",
+    "dexNumber": 42,
+    "scientificName": "Pleurotus eryngii",
+    "name": {
+      "ca": "Gírgola de panical / Bolet de card",
+      "es": "Seta de cardo",
+      "en": "King Oyster / King Trumpet"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11,12,3,4,5]",
+    "altitude": "100m – 1400m",
+    "capDescription": "De 4 a 12 cm, convex a deprimit, de color bru grisenc a marró ocre, amb el marge enrotllat inicialment."
+  },
+  {
+    "id": "lactarius_semisanguifluus",
+    "dexNumber": 43,
+    "scientificName": "Lactarius semisanguifluus",
+    "name": {
+      "ca": "Pinetell de sang / Rovelló de pi negre",
+      "es": "Níscalo semirrojo / Falso níscalo de sangre",
+      "en": "Highland Saffron Milkcap / Half-blood Milkcap"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11]",
+    "altitude": "800m – 2000m",
+    "capDescription": "De 4 a 10 cm, de convex a embutat, ataronjat amb tons rosats i zones concèntriques, que ràpidament s\\'oxida i es taca de verdet intens."
+  },
+  {
+    "id": "suillus_bellinii",
+    "dexNumber": 44,
+    "scientificName": "Suillus bellinii",
+    "name": {
+      "ca": "Pinet de pi bord / Molleric de Bellini",
+      "es": "Boleto de Bellini / Hongo de pino blanco",
+      "en": "Bellini\\"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "0m – 800m",
+    "capDescription": "De 5 a 12 cm, molt viscós i brillant en temps humit, de color blanquinós a crema marbrenc amb taques avellana."
+  },
+  {
+    "id": "tricholoma_equestre",
+    "dexNumber": 45,
+    "scientificName": "Tricholoma equestre",
+    "name": {
+      "ca": "Groguet / Verderol / Bolet dels cavallers",
+      "es": "Seta de los caballeros / Verderol",
+      "en": "Yellow Knight / Man on Horseback"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "200m – 1600m",
+    "capDescription": "De 5 a 12 cm, convex a aplanat, viscós en temps humit, de color groc viu a groc verdós amb el centre marronós i fibril·lós."
+  },
+  {
+    "id": "amanita_virosa",
+    "dexNumber": 46,
+    "scientificName": "Amanita virosa",
+    "name": {
+      "ca": "Farinera pudent / Àngel de la mort",
+      "es": "Cicuta fétida / Ángel de la muerte",
+      "en": "Destroying Angel"
+    },
+    "edibility": "mortal",
+    "rarityTier": "rar",
+    "fruitingSeason": "[7,8,9,10]",
+    "altitude": "700m – 1900m",
+    "capDescription": "De 5 a 10 cm, cònic o campanulat asimètric, blanc pur lluent, llis, lleugerament viscós en temps humit."
+  },
+  {
+    "id": "galerina_marginata",
+    "dexNumber": 47,
+    "scientificName": "Galerina marginata",
+    "name": {
+      "ca": "Galerina mortal / Galerina vironosa",
+      "es": "Galerina mortal / Galerina rebordeada",
+      "en": "Funeral Bell / Deadly Galerina"
+    },
+    "edibility": "mortal",
+    "rarityTier": "comu",
+    "fruitingSeason": "[8,9,10,11]",
+    "altitude": "400m – 1900m",
+    "capDescription": "De 1.5 a 4 cm, convex a aplanat, higròfan, de color bru groguenc a ocre mel amb el marge estriat per transparència quan és humit."
+  },
+  {
+    "id": "tuber_melanosporum",
+    "dexNumber": 48,
+    "scientificName": "Tuber melanosporum",
+    "name": {
+      "ca": "Tòfona negra / Trufa negra",
+      "es": "Trufa negra",
+      "en": "Black Truffle / Périgord Truffle"
+    },
+    "edibility": "excellent",
+    "rarityTier": "llegendari",
+    "fruitingSeason": "[11,12,1,2,3]",
+    "altitude": "400m – 1400m",
+    "capDescription": "Bolet subterrani (hipogeu) de 2 a 10 cm, globular o arrodonit de forma irregular. Peridi (pell externa) negre carbó o bru fosc, cobert de berrugues piramidals poligonals molt dures."
+  },
+  {
+    "id": "infundibulicybe_geotropa",
+    "dexNumber": 49,
+    "scientificName": "Infundibulicybe geotropa",
+    "name": {
+      "ca": "Pampa / Candela de bruixa / Cap d\\",
+      "es": "Platera / Cabeza de fraile",
+      "en": "Trooping Funnel / Monk\\"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "300m – 1500m",
+    "capDescription": "Gran i imponent (10-25 cm), convex d\\'inici que s\\'embuta profundament amb l\\'edat, amb un característic mugró o bony central prominent. De color beix ocre pàl·lid, camussa o cafè amb llet clar."
+  },
+  {
+    "id": "boletus_pinophilus",
+    "dexNumber": 50,
+    "scientificName": "Boletus pinophilus",
+    "name": {
+      "ca": "Cep vermell / Cep de pi / Sureny vermell",
+      "es": "Boleto pinícola / Hongo de pino",
+      "en": "Pine Bolete"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[8,9,10,11]",
+    "altitude": "800m – 2100m",
+    "capDescription": "Massís i corpulent (8-25 cm), convex, de color caoba fosc, bru rogenc o coure vermellós amb reflexos granats, amb una superfície rugosa finament vellutada."
+  },
+  {
+    "id": "neoboletus_luridiformis",
+    "dexNumber": 51,
+    "scientificName": "Neoboletus luridiformis",
+    "name": {
+      "ca": "Mataparent de peu vermell / Bolet de bou",
+      "es": "Boleto de pie rojo",
+      "en": "Scarletina Bolete / Dotted-Stem Bolete"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[7,8,9,10,11]",
+    "altitude": "600m – 1900m",
+    "capDescription": "De 6 a 20 cm, hemisfèric a convex, vellutat, de color marró xocolata fosc, marró vellut o bru sutge."
+  },
+  {
+    "id": "boletus_reticulatus",
+    "dexNumber": 52,
+    "scientificName": "Boletus reticulatus",
+    "name": {
+      "ca": "Cep d\\",
+      "es": "Boleto reticulado / Boleto de verano",
+      "en": "Summer Bolete"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[5,6,7,8,9,10]",
+    "altitude": "200m – 1400m",
+    "capDescription": "De 7 a 22 cm, convex, sec, finament vellutat, de color beix ocre clar, avellana o cafè amb llet, sovint clivellat en petits mosaics en temps sec."
+  },
+  {
+    "id": "hygrophorus_marzuolus",
+    "dexNumber": 53,
+    "scientificName": "Hygrophorus marzuolus",
+    "name": {
+      "ca": "Marçot / Bolet de març",
+      "es": "Marzuelo / Seta de marzo",
+      "en": "March Mushroom / Snowdrop Woodwax"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[2,3,4]",
+    "altitude": "700m – 1800m",
+    "capDescription": "De 4 a 12 cm, carnós, irregularment convex, de color gris plom, gris cendra fosc a negre sutge, sovint clapat de blanquinós en estar enterrat sota la pinassa."
+  },
+  {
+    "id": "russula_aurea",
+    "dexNumber": 54,
+    "scientificName": "Russula aurea",
+    "name": {
+      "ca": "Llora daurada / Cuaverda daurada",
+      "es": "Rúsula dorada",
+      "en": "Gilded Brittlegill"
+    },
+    "edibility": "excellent",
+    "rarityTier": "rar",
+    "fruitingSeason": "[6,7,8,9,10]",
+    "altitude": "300m – 1500m",
+    "capDescription": "De 5 a 10 cm, convex que s\\'aplana, de color vermell vermelló viu amb taques groc daurat o crom llimona característiques, especialment al marge."
+  },
+  {
+    "id": "craterellus_tubaeformis",
+    "dexNumber": 55,
+    "scientificName": "Craterellus tubaeformis",
+    "name": {
+      "ca": "Rossinyol de bosc / Trompeta groga / Rossinyolic",
+      "es": "Trompeta amarilla / Angula de monte",
+      "en": "Trumpet Chanterelle / Yellowfoot"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "400m – 1800m",
+    "capDescription": "De 2 a 6 cm, en forma d\\'embut o trompeta perforada al centre fins a l\\'interior buit del peu. De color marró fosc, bru groguenc o bistre amb vores ondulades."
+  },
+  {
+    "id": "agaricus_arvensis",
+    "dexNumber": 56,
+    "scientificName": "Agaricus arvensis",
+    "name": {
+      "ca": "Bola de neu / Xampinyó d\\",
+      "es": "Champiñón anisado / Bola de nieve",
+      "en": "Horse Mushroom"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[5,6,9,10,11]",
+    "altitude": "200m – 1700m",
+    "capDescription": "Gros i corpulent (8-20 cm), globós de jove (forma de bola de neu) que s\\'aplana a convex. De color blanc pur a blanc groguenc, que es taca suaument de groc ocre en fregar-lo."
+  },
+  {
+    "id": "hydnum_rufescens",
+    "dexNumber": 57,
+    "scientificName": "Hydnum rufescens",
+    "name": {
+      "ca": "Llengua de bou rogenca / Llengua de gat",
+      "es": "Lengua de vaca rojiza / Gamuza rojiza",
+      "en": "Terracotta Hedgehog / Rufous Wood Hedgehog"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "300m – 1700m",
+    "capDescription": "De 3 a 8 cm, irregular, convex a pla, de color ataronjat rogenc, terracota o bru albercoc pàl·lid, més petit i prim que H. repandum."
+  },
+  {
+    "id": "scleroderma_citrinum",
+    "dexNumber": 58,
+    "scientificName": "Scleroderma citrinum",
+    "name": {
+      "ca": "Patac d\\",
+      "es": "Falsa trufa / Patata de tierra",
+      "en": "Common Earthball / Pigskin Poison Puffball"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[8,9,10,11,12]",
+    "altitude": "200m – 1600m",
+    "capDescription": "De 3 a 10 cm, globular o arrodonit deprimit, amb una pell (peridi) molt gruixuda, coriàcia i dura, de color groguenc ocre o terrós pàl·lid, coberta de berrugues i clivelles escamoses."
+  },
+  {
+    "id": "clitocybe_nebularis",
+    "dexNumber": 59,
+    "scientificName": "Clitocybe nebularis",
+    "name": {
+      "ca": "Pampa de boira / Boira / Burell",
+      "es": "Pardilla / Seta de brezo",
+      "en": "Clouded Agaric / Clouded Funnel"
+    },
+    "edibility": "toxic",
+    "rarityTier": "comu",
+    "fruitingSeason": "[10,11,12]",
+    "altitude": "300m – 1600m",
+    "capDescription": "De 7 a 18 cm, carnós, convex a pla amb el marge enrotllat, de color gris cendrós, gris boira o fum, sense mugró central."
+  },
+  {
+    "id": "tylopilus_felleus",
+    "dexNumber": 60,
+    "scientificName": "Tylopilus felleus",
+    "name": {
+      "ca": "Mataparent amarg / Cep amarg",
+      "es": "Boleto amargo / Hongo amargo",
+      "en": "Bitter Bolete"
+    },
+    "edibility": "sense_valor",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[7,8,9,10,11]",
+    "altitude": "500m – 1700m",
+    "capDescription": "De 6 a 15 cm, convex a pla, llis, sec, de color marró clar, beix avellana o ocre camussa, idèntic al barret d\\'un Cep jove."
+  },
+  {
+    "id": "suillellus_luridus",
+    "dexNumber": 61,
+    "scientificName": "Suillellus luridus",
+    "name": {
+      "ca": "Mataparent de bou / Fals bolet de bou",
+      "es": "Boleto lúrido",
+      "en": "Lurid Bolete"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[6,7,8,9,10,11]",
+    "altitude": "200m – 1500m",
+    "capDescription": "De 7 a 20 cm, convex, sec, finament vellutat, de color marró olivaci fosc, ocre terrós o gamussa brut."
+  },
+  {
+    "id": "russula_emetica",
+    "dexNumber": 62,
+    "scientificName": "Russula emetica",
+    "name": {
+      "ca": "Rússula emètica / Cua cremosa",
+      "es": "Rúsula emética",
+      "en": "The Sickener / Vomiting Russula"
+    },
+    "edibility": "toxic",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[7,8,9,10,11]",
+    "altitude": "500m – 1900m",
+    "capDescription": "De 4 a 9 cm, convex que s\\'aplana i es deprimeix al centre, lluent, viscós en temps humit, de color vermell cirera o escarlata molt viu i uniforme."
+  },
+  {
+    "id": "cyclocybe_aegerita",
+    "dexNumber": 63,
+    "scientificName": "Cyclocybe aegerita",
+    "name": {
+      "ca": "Pollancró / Bolet de pollanc",
+      "es": "Seta de chopo",
+      "en": "Poplar Fieldcap / Chestnut Mushroom"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[4,5,6,7,8,9,10,11]",
+    "altitude": "50m – 1200m",
+    "capDescription": "De 4 a 14 cm, hemisfèric i marró avellana de jove, després convex-aplanat amb el centre més fosc i el marge ondulat i blanquinós."
+  },
+  {
+    "id": "tricholoma_portentosum",
+    "dexNumber": 64,
+    "scientificName": "Tricholoma portentosum",
+    "name": {
+      "ca": "Fredolic d\\",
+      "es": "Capuchina / Negrilla anisada",
+      "en": "Charbonnier / Sooty Knight"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "700m – 1900m",
+    "capDescription": "De 5 a 12 cm, convex a aplanat amb un umbó obtús, una mica viscós en temps humit, de color gris cendra a gris sutge amb reflexos groguencs i fibril·les radials fosques."
+  },
+  {
+    "id": "tuber_aestivum",
+    "dexNumber": 65,
+    "scientificName": "Tuber aestivum",
+    "name": {
+      "ca": "Tòfona d\\",
+      "es": "Trufa de verano / Trufa de San Juan",
+      "en": "Summer Truffle / Burgundy Truffle"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[5,6,7,8,9]",
+    "altitude": "200m – 1300m",
+    "capDescription": "Cos subterrani arrodonit o lobulat de 2 a 10 cm, amb peridi negre o bru molt fosc recobert de berrugues piramidals grosses, anguloses i dures."
+  },
+  {
+    "id": "amanita_rubescens",
+    "dexNumber": 66,
+    "scientificName": "Amanita rubescens",
+    "name": {
+      "ca": "Cua de cavall / Vinosa",
+      "es": "Amanita vinosa / Roscón",
+      "en": "The Blusher"
+    },
+    "edibility": "comestible",
+    "rarityTier": "comu",
+    "fruitingSeason": "[5,6,7,8,9,10,11]",
+    "altitude": "100m – 1500m",
+    "capDescription": "De 6 a 18 cm, globós que passa a convex-aplanat, de color terrós rogenc a bru rosat, cobert de restes de vel en forma de berrugues farinoses irregulars gris-rosades."
+  },
+  {
+    "id": "imleria_badia",
+    "dexNumber": 67,
+    "scientificName": "Imleria badia",
+    "name": {
+      "ca": "Bolet de baia / Cep de baia / Molleric de baia",
+      "es": "Boleto bayo",
+      "en": "Bay Bolete"
+    },
+    "edibility": "excellent",
+    "rarityTier": "comu",
+    "fruitingSeason": "[8,9,10,11]",
+    "altitude": "400m – 1800m",
+    "capDescription": "De 5 a 15 cm, hemisfèric a convex, vellutat de jove i viscós en temps humit, de color marró castany fosc, xocolata o bru vermellós."
+  },
+  {
+    "id": "lactarius_vinosus",
+    "dexNumber": 68,
+    "scientificName": "Lactarius vinosus",
+    "name": {
+      "ca": "Rovelló de sang vinosa / Lleterola vinosa",
+      "es": "Níscalo de sangre vinosa",
+      "en": "Wine-Staining Milkcap"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "100m – 1000m",
+    "capDescription": "De 5 a 12 cm, convex amb el centre deprimit, de color lila vinós a vermell fosc amb reflexos grisencs o verds de vell, amb cercles concèntrics suaus."
+  },
+  {
+    "id": "cantharellus_subpruinosus",
+    "dexNumber": 69,
+    "scientificName": "Cantharellus subpruinosus",
+    "name": {
+      "ca": "Rossinyol blanc / Rossinyol de roure",
+      "es": "Rebozuelo blanco / Cantarela pruinosa",
+      "en": "Frosted Chanterelle / Pale Oak Chanterelle"
+    },
+    "edibility": "excellent",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[5,6,9,10,11]",
+    "altitude": "150m – 1200m",
+    "capDescription": "De 4 a 12 cm, carnós, convex i després en embut amb el marge ondulat, de color groc rovell d\\'ou cobert d\\'una capa pruïnosa blanquinosa o platejada molt visible."
+  },
+  {
+    "id": "leccinum_aurantiacum",
+    "dexNumber": 70,
+    "scientificName": "Leccinum aurantiacum",
+    "name": {
+      "ca": "Cep vermelló / Pell de taronja / Bolet vermell",
+      "es": "Boleto anaranjado / Boleto de álamo",
+      "en": "Orange Oak Bolete / Red-capped Scaber Stalk"
+    },
+    "edibility": "comestible",
+    "rarityTier": "poc_frequent",
+    "fruitingSeason": "[6,7,8,9,10]",
+    "altitude": "400m – 1700m",
+    "capDescription": "De 6 a 20 cm, robust, hemisfèric a convex, sec, finament vellutat, d\\'un color vermell ataronjat intens molt vistós que recorda la pell de taronja."
+  },
+  {
+    "id": "hypholoma_fasciculare",
+    "dexNumber": 71,
+    "scientificName": "Hypholoma fasciculare",
+    "name": {
+      "ca": "Bolet de pi amarg / Fals pollancró / Bolet de sofre",
+      "es": "Hifoloma de láminas verdes / Falso chopo amargo",
+      "en": "Sulphur Tuft / Clustered Woodlover"
+    },
+    "edibility": "toxic",
+    "rarityTier": "molt_comu",
+    "fruitingSeason": "[4,5,6,7,8,9,10,11,12]",
+    "altitude": "50m – 1800m",
+    "capDescription": "De 2 a 7 cm, convex a pla-convex, llis, de color groc sofre molt brillant amb el centre ataronjat o vermellós."
+  },
+  {
+    "id": "paxillus_involutus",
+    "dexNumber": 72,
+    "scientificName": "Paxillus involutus",
+    "name": {
+      "ca": "Paxil·le / Fals rovelló d\\",
+      "es": "Paxilo enrollado / Falso níscalo pardo",
+      "en": "Brown Roll-Rim / Poison Paxillus"
+    },
+    "edibility": "mortal",
+    "rarityTier": "comu",
+    "fruitingSeason": "[8,9,10,11]",
+    "altitude": "200m – 1800m",
+    "capDescription": "De 5 a 15 cm, convex que es deprimeix al centre en forma d\\'embut ample, viscós en temps humit, de color ocre olivaci a marró terrós, amb el marge fortament ENROTLLAT cap a dins i vellutat."
+  },
+  {
+    "id": "amanita_citrina",
+    "dexNumber": 73,
+    "scientificName": "Amanita citrina",
+    "name": {
+      "ca": "Farinera groga / Reig de la mort fals",
+      "es": "Oronja de limón / Amanita citrina",
+      "en": "False Death Cap"
+    },
+    "edibility": "sense_valor",
+    "rarityTier": "comu",
+    "fruitingSeason": "[8,9,10,11,12]",
+    "altitude": "100m – 1400m",
+    "capDescription": "De 5 a 10 cm, hemisfèric a convex-aplanat, de color groc llimona pàl·lid, groc verdós o blanquinós, cobert de grans plaques membranoses irregulars de color bru grisenc."
+  },
+  {
+    "id": "tricholoma_saponaceum",
+    "dexNumber": 74,
+    "scientificName": "Tricholoma saponaceum",
+    "name": {
+      "ca": "Bolet de sabó / Fredolic de sabó",
+      "es": "Tricoloma jabonoso / Seta de jabón",
+      "en": "Soapy Knight / Soap-scented Toadstool"
+    },
+    "edibility": "toxic",
+    "rarityTier": "molt_comu",
+    "fruitingSeason": "[9,10,11,12]",
+    "altitude": "200m – 1800m",
+    "capDescription": "De 4 a 10 cm, convex a aplanat amb marge ondulat, llis, molt variable de color: gris verdós, bru olivaci o ocre pàl·lid."
+  },
+  {
+    "id": "inocybe_erubescens",
+    "dexNumber": 75,
+    "scientificName": "Inocybe erubescens",
+    "name": {
+      "ca": "Inòcibe de Patouillard",
+      "es": "Inocibe de Patouillard / Bruja roja",
+      "en": "Deadly Fibrecap / Red-staining Inocybe"
+    },
+    "edibility": "mortal",
+    "rarityTier": "rara",
+    "fruitingSeason": "[4,5,6,7]",
+    "altitude": "200m – 1400m",
+    "capDescription": "De 3 a 9 cm, cònic o acampanat amb un umbó central marcat i punxegut, blanc o crema pàl·lid que s\\'esquerda radialment en fibril·les sedoses i que pren ràpidament TAQUES VERMELL-MAÓ intenses on es toca o envelleix."
+  }
+]

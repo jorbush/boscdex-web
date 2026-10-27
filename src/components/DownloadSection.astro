@@ -1,0 +1,166 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="download" class="py-16 md:py-24 bg-[#FAF8F2] border-b-2.5 border-ink relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="font-pixel text-xs font-bold text-forest">DISTRIBUCIÓ LLIURE</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.download.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.download.subtitle}
+      </p>
+    </div>
+
+    <!-- Download Options Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+      
+      <!-- Card 1: ARM64-v8a (Recommended) -->
+      <div class="bg-white border-3 border-forest rounded-3xl p-6 sm:p-8 shadow-hard-green relative flex flex-col justify-between">
+        <div class="absolute -top-3.5 right-6 px-3 py-1 bg-forest text-white font-pixel text-xs font-bold rounded-full border-2 border-ink shadow-hard-sm">
+          {t.download.arm64Badge}
+        </div>
+
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-forest-light border-2 border-ink rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm">
+              📱
+            </div>
+            <div>
+              <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+                {t.download.arm64Title}
+              </h3>
+              <span class="text-xs font-pixel font-bold text-forest">
+                Release v1.0.0 • ~45 MB
+              </span>
+            </div>
+          </div>
+
+          <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium mb-6">
+            {t.download.arm64Desc}
+          </p>
+        </div>
+
+        <div class="space-y-3 pt-4 border-t-2 border-ink/10">
+          <a
+            href="/downloads/boscdex-arm64-v8a.apk"
+            download="boscdex-arm64-v8a.apk"
+            onclick="window.playSfx && window.playSfx('badge')"
+            class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-forest text-white font-pixel font-bold text-base rounded-2xl retro-btn hover:bg-forest-pine shadow-arcade-btn group"
+          >
+            <svg class="w-5 h-5 fill-current group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            <span>{t.download.btnDownload} (ARM64)</span>
+          </a>
+          <span class="text-[11px] font-pixel text-ink-faint block text-center">
+            SHA-256 verificable • Compatible amb el 99% dels Android actuals
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 2: Universal Standalone APK -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-8 shadow-hard relative flex flex-col justify-between">
+        <div class="absolute -top-3.5 right-6 px-3 py-1 bg-ink text-white font-pixel text-xs font-bold rounded-full border border-ink shadow-hard-sm">
+          {t.download.universalBadge}
+        </div>
+
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-parchment-light border-2 border-ink rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm">
+              📦
+            </div>
+            <div>
+              <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+                {t.download.universalTitle}
+              </h3>
+              <span class="text-xs font-pixel font-bold text-ink-soft">
+                Release v1.0.0 • ~102 MB
+              </span>
+            </div>
+          </div>
+
+          <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium mb-6">
+            {t.download.universalDesc}
+          </p>
+        </div>
+
+        <div class="space-y-3 pt-4 border-t-2 border-ink/10">
+          <a
+            href="/downloads/boscdex-universal.apk"
+            download="boscdex-universal.apk"
+            onclick="window.playSfx && window.playSfx('badge')"
+            class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-white text-ink font-pixel font-bold text-base rounded-2xl retro-btn hover:bg-parchment-light shadow-arcade-btn group"
+          >
+            <svg class="w-5 h-5 fill-current group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            <span>{t.download.btnDownload} (Universal)</span>
+          </a>
+          <span class="text-[11px] font-pixel text-ink-faint block text-center">
+            Conté totes les arquitectures (armeabi-v7a, arm64-v8a, x86_64)
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Official GitHub Releases & Build from Source -->
+    <div class="max-w-4xl mx-auto bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-8 shadow-hard space-y-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-ink/10 pb-5">
+        <div>
+          <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+            {t.download.githubRelease}
+          </h3>
+          <p class="text-sm text-ink-soft font-medium">
+            Totes les versions, notes de llançament i codi font a GitHub.
+          </p>
+        </div>
+        <a
+          href="https://github.com/jorbush/boscdex/releases"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-forest-light text-forest-pine font-pixel font-bold text-sm rounded-xl retro-btn hover:bg-forest hover:text-white transition-colors"
+        >
+          <span>Veure Releases a GitHub</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Quick terminal snippet for compiling from source -->
+      <div>
+        <span class="font-pixel text-xs font-bold text-ink uppercase tracking-wider block mb-2">
+          💻 {t.download.buildFromSource}:
+        </span>
+        <div class="bg-[#1E2822] text-[#EEF5EA] rounded-2xl p-4 font-mono text-xs overflow-x-auto border-2 border-ink">
+          <code>
+            <span class="text-quest-gold">git clone</span> https://github.com/jorbush/boscdex.git<br/>
+            <span class="text-quest-gold">cd</span> boscdex/boscdex<br/>
+            <span class="text-quest-gold">flutter</span> pub get<br/>
+            <span class="text-quest-gold">dart run</span> build_runner build --delete-conflicting-outputs<br/>
+            <span class="text-forest-mint">flutter run</span> # Executa directament al teu dispositiu!
+          </code>
+        </div>
+      </div>
+
+      <p class="text-xs text-ink-faint text-center font-medium pt-2">
+        {t.download.requirements}
+      </p>
+    </div>
+
+  </div>
+</section>

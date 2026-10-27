@@ -1,0 +1,61 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="features" class="py-16 md:py-24 bg-parchment border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="font-pixel text-xs font-bold text-forest">PILARS DE BOSCDEX</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.features.title}
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-ink-soft font-medium">
+        {t.features.subtitle}
+      </p>
+    </div>
+
+    <!-- 6 Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {t.features.items.map((item) => (
+        <div class="bg-white border-2.5 border-ink rounded-2xl p-6 sm:p-7 shadow-hard hover:shadow-hard-lg hover:-translate-y-1 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl sm:text-4xl filter drop-shadow group-hover:scale-110 transition-transform inline-block">
+                {item.icon}
+              </span>
+              <span class="px-2.5 py-1 text-[11px] font-pixel font-bold bg-[#FAF8F2] border border-ink rounded-lg text-ink-soft">
+                {item.tag}
+              </span>
+            </div>
+            
+            <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink mb-2.5">
+              {item.title}
+            </h3>
+            
+            <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+              {item.description}
+            </p>
+          </div>
+
+          <div class="pt-5 mt-4 border-t-2 border-ink/10 flex items-center gap-2 text-xs font-pixel font-bold text-forest">
+            <span>EXPLORAR TECNOLOGIA</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

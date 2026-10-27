@@ -1,0 +1,161 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+
+// Helper to construct locale paths
+const getLocaleUrl = (targetLocale: Locale) => {
+  return targetLocale === 'ca' ? '/' : `/${targetLocale}`;
+};
+---
+
+<header class="sticky top-0 z-50 bg-[#F5F3EB]/95 backdrop-blur border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Canonical App Logo (Exact round emblem from app) -->
+      <a href={getLocaleUrl(locale)} class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border-2.5 border-ink shadow-hard-sm group-hover:rotate-6 transition-transform overflow-hidden bg-white shrink-0">
+          <img src="/assets/icons/boscdex_logo.png" alt="Boscdex Logo" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-pixel text-2xl font-bold tracking-wider text-ink block leading-none">
+              BOSCDEX
+            </span>
+            <span class="px-1.5 py-0.2 bg-forest text-white font-pixel text-[10px] font-bold rounded">
+              75
+            </span>
+          </div>
+          <span class="text-[11px] font-pixel font-bold text-forest uppercase tracking-widest block mt-0.5">
+            {locale === 'ca' ? 'Guia Micològica' : locale === 'es' ? 'Guía Micológica' : 'Mycological Dex'}
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <a href="#features" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
+          {t.nav.features}
+        </a>
+        <a href="#species" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
+          {t.nav.species}
+        </a>
+        <a href="#safety" class="font-pixel text-sm font-bold text-arcade-red hover:underline transition-colors flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-arcade-red animate-ping inline-block"></span>
+          {t.nav.safety}
+        </a>
+        <a href="#ios-guide" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
+          🍏 {t.nav.iosGuide}
+        </a>
+        <a href="#docs" class="font-pixel text-sm font-bold text-ink hover:text-forest transition-colors">
+          {t.nav.docs}
+        </a>
+        <a href="https://github.com/jorbush/boscdex" target="_blank" rel="noopener noreferrer" class="font-pixel text-sm font-bold text-ink-soft hover:text-ink transition-colors flex items-center gap-1">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          {t.nav.github}
+        </a>
+      </nav>
+
+      <!-- Language Selector & APK Button -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-white border-2 border-ink rounded-lg p-0.5 shadow-hard-sm" aria-label="Selector d'idioma">
+          <a
+            href="/"
+            class={`px-2 py-1 text-xs font-pixel font-bold rounded ${locale === 'ca' ? 'bg-forest text-white' : 'text-ink hover:text-forest'}`}
+            title="Català"
+          >
+            CA
+          </a>
+          <a
+            href="/es"
+            class={`px-2 py-1 text-xs font-pixel font-bold rounded ${locale === 'es' ? 'bg-forest text-white' : 'text-ink hover:text-forest'}`}
+            title="Castellano"
+          >
+            ES
+          </a>
+          <a
+            href="/en"
+            class={`px-2 py-1 text-xs font-pixel font-bold rounded ${locale === 'en' ? 'bg-forest text-white' : 'text-ink hover:text-forest'}`}
+            title="English"
+          >
+            EN
+          </a>
+        </div>
+
+        <!-- Download CTA -->
+        <a
+          href="#download"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-forest text-white font-pixel font-bold text-sm rounded-xl retro-btn hover:bg-forest-pine"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+          {t.nav.download}
+        </a>
+
+        <!-- Sound SFX Toggle Button -->
+        <button
+          id="sfx-toggle"
+          class="w-10 h-10 bg-white border-2 border-ink rounded-xl flex items-center justify-center shadow-hard-sm hover:bg-parchment-light transition-colors text-ink"
+          title="So retro (SFX)"
+          aria-label="Activar o desactivar efectes de so retro"
+        >
+          <span id="sfx-icon" class="text-base">🔊</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden w-10 h-10 bg-white border-2 border-ink rounded-xl flex items-center justify-center shadow-hard-sm text-ink"
+          aria-label="Menú"
+        >
+          <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t-2 border-ink bg-[#FAF8F2] px-4 py-4 space-y-3">
+    <a href="#features" class="block font-pixel font-bold text-base text-ink py-1">
+      {t.nav.features}
+    </a>
+    <a href="#species" class="block font-pixel font-bold text-base text-ink py-1">
+      {t.nav.species}
+    </a>
+    <a href="#safety" class="block font-pixel font-bold text-base text-arcade-red py-1">
+      ⚠️ {t.nav.safety}
+    </a>
+    <a href="#ios-guide" class="block font-pixel font-bold text-base text-ink py-1">
+      🍏 {t.nav.iosGuide}
+    </a>
+    <a href="#docs" class="block font-pixel font-bold text-base text-ink py-1">
+      {t.nav.docs}
+    </a>
+    <a href="https://github.com/jorbush/boscdex" target="_blank" rel="noopener noreferrer" class="block font-pixel font-bold text-base text-ink-soft py-1">
+      ⭐ GitHub
+    </a>
+    <div class="pt-2">
+      <a href="#download" class="w-full inline-flex justify-center items-center gap-2 px-4 py-2.5 bg-forest text-white font-pixel font-bold text-sm rounded-xl retro-btn">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        {t.nav.download}
+      </a>
+    </div>
+  </div>
+</header>

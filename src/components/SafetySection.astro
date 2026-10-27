@@ -1,0 +1,265 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+
+const confusionPairs = [
+  {
+    edible: {
+      name: locale === 'ca' ? 'Rovelló / Pinetell' : locale === 'es' ? 'Níscalo' : 'Saffron Milk Cap',
+      latin: 'Lactarius deliciosus',
+      image: '/assets/mushrooms/lactarius_deliciosus.png',
+      badge: locale === 'ca' ? 'COMESTIBLE' : locale === 'es' ? 'COMESTIBLE' : 'CHOICE EDIBLE',
+      badgeColor: 'forest',
+    },
+    toxic: {
+      name: locale === 'ca' ? 'Fals rovelló' : locale === 'es' ? 'Falso níscalo' : 'Yellow-drop Milkcap',
+      latin: 'Lactarius chrysorrheus',
+      image: '/assets/mushrooms/lactarius_chrysorrheus.png',
+      badge: locale === 'ca' ? 'TÒXIC' : locale === 'es' ? 'TÓXICO' : 'TOXIC',
+      badgeColor: 'arcade-red',
+    },
+    diagnosticKey: {
+      ca: 'El Rovelló té làtex taronja pastanaga immutable. El Fals rovelló té làtex blanc que en pocs segons vira a groc sofre intens i és molt acre.',
+      es: 'El Níscalo tiene látex naranja inmutable. El Falso níscalo segrega látex blanco que en pocos segundos vira a amarillo azufre muy picante.',
+      en: 'The true Saffron Milk Cap produces unchanging carrot-orange latex. The False Milkcap exudes white latex that swiftly turns bright sulphur-yellow and acrid.',
+    },
+  },
+  {
+    edible: {
+      name: locale === 'ca' ? 'Cep' : locale === 'es' ? 'Boleto / Cep' : 'Penny Bun / Porcini',
+      latin: 'Boletus edulis',
+      image: '/assets/mushrooms/boletus_edulis.png',
+      badge: locale === 'ca' ? 'EXCEL·LENT' : locale === 'es' ? 'EXCELENTE' : 'CHOICE EDIBLE',
+      badgeColor: 'forest',
+    },
+    toxic: {
+      name: locale === 'ca' ? 'Mataparent de Satanàs' : locale === 'es' ? 'Boleto de Satanás' : 'Satan\'s Bolete',
+      latin: 'Rubroboletus satanas',
+      image: '/assets/mushrooms/rubroboletus_satanas.png',
+      badge: locale === 'ca' ? 'TÒXIC' : locale === 'es' ? 'TÓXICO' : 'TOXIC',
+      badgeColor: 'arcade-red',
+    },
+    diagnosticKey: {
+      ca: 'El Cep mai blaveja en tallar-lo i té porus blancs o groguencs. El Mataparent té barret blanquinós, porus vermells i blaveja a l\'instant al tall.',
+      es: 'El Boleto jamás azulea al corte y tiene poros blancos o amarillentos. El de Satanás tiene sombrero blancuzco, poros rojos y azulea intensamente.',
+      en: 'The Penny Bun never blues upon cutting and has white-to-olive pores. Satan\'s bolete has chalky-grey skin, scarlet pores, and turns deep blue on bruising.',
+    },
+  },
+  {
+    edible: {
+      name: locale === 'ca' ? 'Xampinyó silvestre' : locale === 'es' ? 'Champiñón silvestre' : 'Field Mushroom',
+      latin: 'Agaricus campestris',
+      image: '/assets/mushrooms/agaricus_campestris.png',
+      badge: locale === 'ca' ? 'COMESTIBLE' : locale === 'es' ? 'COMESTIBLE' : 'EDIBLE',
+      badgeColor: 'forest',
+    },
+    toxic: {
+      name: locale === 'ca' ? 'Cicuta blanca' : locale === 'es' ? 'Cicuta blanca' : 'Spring Death Cap',
+      latin: 'Amanita verna',
+      image: '/assets/mushrooms/amanita_verna.png',
+      badge: locale === 'ca' ? '☠️ MORTAL' : locale === 'es' ? '☠️ MORTAL' : '☠️ LETHAL',
+      badgeColor: 'arcade-red',
+    },
+    diagnosticKey: {
+      ca: 'PERILL MORTAL! La Cicuta blanca té làmines blanques pures i una gran volva en sac a la base. El xampinyó té làmines rosades a xocolata i mai té volva.',
+      es: '¡PELIGRO MORTAL! La Cicuta blanca tiene láminas blancas puras y gran volva membranosa. El champiñón tiene láminas rosas o marrón chocolate y carece de volva.',
+      en: 'LETHAL HAZARD! The Spring Death Cap retains pure white gills and a large sack volva at the base. Field mushrooms have pink-to-brown gills and no volva.',
+    },
+  },
+  {
+    edible: {
+      name: locale === 'ca' ? 'Rossinyol' : locale === 'es' ? 'Rebozuelo' : 'Golden Chanterelle',
+      latin: 'Cantharellus cibarius',
+      image: '/assets/mushrooms/cantharellus_cibarius.png',
+      badge: locale === 'ca' ? 'EXCEL·LENT' : locale === 'es' ? 'EXCELENTE' : 'CHOICE EDIBLE',
+      badgeColor: 'forest',
+    },
+    toxic: {
+      name: locale === 'ca' ? 'Gírgola d\'olivera' : locale === 'es' ? 'Seta de olivo' : 'Jack-o\'-lantern',
+      latin: 'Omphalotus olearius',
+      image: '/assets/mushrooms/omphalotus_olearius.png',
+      badge: locale === 'ca' ? 'TÒXIC' : locale === 'es' ? 'TÓXICO' : 'TOXIC',
+      badgeColor: 'arcade-red',
+    },
+    diagnosticKey: {
+      ca: 'La Gírgola d\'olivera creix cespitosa sobre fusta/arrels i té làmines de veritat tallants. El Rossinyol creix a terra i té plecs obtusos bifurcats.',
+      es: 'La seta de olivo nace en racimos sobre madera con láminas verdaderas afiladas. El rebozuelo nace en el suelo y presenta pliegues gruesos bifurcados.',
+      en: 'Jack-o\'-lantern grows in dense tufts on wood with sharp blade-like gills. Chanterelles grow terrestrially and feature blunt forked folds.',
+    },
+  },
+];
+---
+
+<section id="safety" class="py-16 md:py-24 bg-parchment border-b-2.5 border-ink relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header with Hazard Badge -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-arcade-danger border-2 border-arcade-red rounded-full shadow-hard-sm mb-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-arcade-red animate-ping"></span>
+        <span class="font-pixel text-xs sm:text-sm font-bold text-arcade-red tracking-wider">
+          {t.safety.badge}
+        </span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.safety.title}
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-ink-soft font-medium">
+        {t.safety.subtitle}
+      </p>
+    </div>
+
+    <!-- Algorithm Architecture Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      
+      <!-- Card 1: Zero-Tolerance Lethal Gate -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-8 shadow-hard relative overflow-hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-arcade-danger border-2 border-arcade-red rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm">
+            ☠️
+          </div>
+          <div>
+            <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+              {t.safety.zeroTolerance}
+            </h3>
+            <span class="text-xs font-pixel font-bold text-arcade-red uppercase tracking-wider">
+              {locale === 'ca' ? 'Filtre de bolets letals' : locale === 'es' ? 'Filtro de setas mortales' : 'Lethal Taxa Gate'}
+            </span>
+          </div>
+        </div>
+        <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+          {t.safety.zeroToleranceText}
+        </p>
+        
+        <div class="mt-4 pt-4 border-t-2 border-ink/10 flex flex-wrap gap-2 text-xs font-pixel">
+          <span class="px-2 py-1 bg-arcade-danger text-arcade-red border border-arcade-red rounded">Amanita phalloides</span>
+          <span class="px-2 py-1 bg-arcade-danger text-arcade-red border border-arcade-red rounded">Amanita verna</span>
+          <span class="px-2 py-1 bg-arcade-danger text-arcade-red border border-arcade-red rounded">Cortinarius orellanus</span>
+          <span class="px-2 py-1 bg-arcade-danger text-arcade-red border border-arcade-red rounded">Galerina marginata</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Interactive Botanical Checklist -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-8 shadow-hard relative overflow-hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-forest-light border-2 border-forest rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm">
+            🛡️
+          </div>
+          <div>
+            <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+              {t.safety.algorithmTitle}
+            </h3>
+            <span class="text-xs font-pixel font-bold text-forest uppercase tracking-wider">
+              {locale === 'ca' ? 'Validació Botànica en 4 Capes' : locale === 'es' ? 'Validación Botánica 4 Capas' : '4-Layer Botanical Check'}
+            </span>
+          </div>
+        </div>
+        <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+          {t.safety.algorithmText}
+        </p>
+
+        <div class="mt-4 pt-4 border-t-2 border-ink/10 space-y-2 text-xs font-pixel text-ink">
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded-full bg-forest text-white flex items-center justify-center text-[10px]">1</span>
+            <span>{locale === 'ca' ? 'Porta Letal (≥10% sobreescriu qualsevol comestible)' : locale === 'es' ? 'Puerta Letal (≥10% anula comestibles)' : 'Lethal Gate (≥10% overrides edibility)'}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded-full bg-forest text-white flex items-center justify-center text-[10px]">2</span>
+            <span>{locale === 'ca' ? 'Porta d\'Incertesa (<70% prohibeix consum)' : locale === 'es' ? 'Puerta de Incertidumbre (<70% prohíbe consumo)' : 'Uncertainty Gate (<70% prohibits consumption)'}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 rounded-full bg-forest text-white flex items-center justify-center text-[10px]">3</span>
+            <span>{locale === 'ca' ? 'Porta de Confusió Perillosa (28 parelles bidireccionals)' : locale === 'es' ? 'Puerta de Confusión Peligrosa (28 parejas bidireccionales)' : 'Lookalike Gate (28 bidirectional pairs)'}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Side-by-Side Lookalikes Gallery -->
+    <div class="mb-14">
+      <div class="text-center mb-8">
+        <h3 class="font-pixel text-2xl sm:text-3xl font-bold text-ink">
+          {t.safety.pairsTitle}
+        </h3>
+        <p class="text-sm sm:text-base text-ink-soft font-medium mt-1">
+          {t.safety.pairsSubtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        {confusionPairs.map((pair) => (
+          <div class="bg-white border-2.5 border-ink rounded-3xl p-5 sm:p-6 shadow-hard space-y-4 hover:shadow-hard-lg transition-all">
+            
+            <!-- Side-by-side Cards -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+              
+              <!-- Edible Specimen -->
+              <div class="bg-[#FAF8F2] border-2 border-forest rounded-2xl p-3 text-center flex flex-col justify-between">
+                <span class="inline-block px-2 py-0.5 text-[10px] font-pixel font-bold bg-forest text-white rounded mb-2 self-center">
+                  {pair.edible.badge}
+                </span>
+                <div class="w-20 h-20 mx-auto flex items-center justify-center my-1">
+                  <img src={pair.edible.image} alt={pair.edible.name} class="w-16 h-16 object-contain" />
+                </div>
+                <div>
+                  <h4 class="font-pixel text-sm sm:text-base font-bold text-ink leading-tight">{pair.edible.name}</h4>
+                  <p class="text-[10px] text-ink-soft italic">{pair.edible.latin}</p>
+                </div>
+              </div>
+
+              <!-- Toxic Twin -->
+              <div class="bg-arcade-danger border-2 border-arcade-red rounded-2xl p-3 text-center flex flex-col justify-between">
+                <span class="inline-block px-2 py-0.5 text-[10px] font-pixel font-bold bg-arcade-red text-white rounded mb-2 self-center">
+                  {pair.toxic.badge}
+                </span>
+                <div class="w-20 h-20 mx-auto flex items-center justify-center my-1">
+                  <img src={pair.toxic.image} alt={pair.toxic.name} class="w-16 h-16 object-contain" />
+                </div>
+                <div>
+                  <h4 class="font-pixel text-sm sm:text-base font-bold text-arcade-red leading-tight">{pair.toxic.name}</h4>
+                  <p class="text-[10px] text-ink-soft italic">{pair.toxic.latin}</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Diagnostic Trait Strip -->
+            <div class="bg-[#FAF8F2] border-2 border-ink rounded-xl p-3.5 space-y-1.5">
+              <span class="font-pixel text-xs font-bold text-ink block border-b border-ink/15 pb-1">
+                🔍 {locale === 'ca' ? 'Clau Diagnòstica de Camp' : locale === 'es' ? 'Clave Diagnóstica de Campo' : 'Diagnostic Field Key'}:
+              </span>
+              <p class="text-xs text-ink-soft font-medium leading-relaxed">
+                {pair.diagnosticKey[locale]}
+              </p>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Mandatory Mycological Disclaimer Box -->
+    <div class="bg-quest-warning border-3 border-ink rounded-3xl p-6 sm:p-8 shadow-hard flex flex-col sm:flex-row items-center gap-6">
+      <div class="w-16 h-16 bg-white border-2 border-ink rounded-2xl flex items-center justify-center text-3xl shadow-hard-sm shrink-0">
+        ⚠️
+      </div>
+      <div>
+        <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink mb-1.5">
+          {t.safety.disclaimerTitle}
+        </h3>
+        <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+          {t.safety.disclaimerText}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

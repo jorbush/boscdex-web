@@ -1,0 +1,108 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="ios-guide" class="py-16 md:py-24 bg-[#EEF5EA] border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="text-base">🍏</span>
+        <span class="font-pixel text-xs font-bold text-forest">{t.iosGuide.badge}</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.iosGuide.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.iosGuide.subtitle}
+      </p>
+    </div>
+
+    <!-- Why iOS Needs Xcode Info Box -->
+    <div class="max-w-4xl mx-auto bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-8 shadow-hard mb-12">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-quest-warning border-2 border-ink rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm shrink-0">
+          💡
+        </div>
+        <div>
+          <h3 class="font-pixel text-lg sm:text-xl font-bold text-ink mb-1.5">
+            {t.iosGuide.whyTitle}
+          </h3>
+          <p class="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+            {t.iosGuide.whyText}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step by Step Grid -->
+    <div class="max-w-5xl mx-auto mb-14">
+      <h3 class="font-pixel text-2xl font-bold text-ink mb-6 text-center">
+        {t.iosGuide.stepsTitle}
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {t.iosGuide.steps.map((s) => (
+          <div class="bg-white border-2.5 border-ink rounded-2xl p-5 shadow-hard flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-8 h-8 rounded-full bg-forest text-white font-pixel text-sm font-bold flex items-center justify-center border-2 border-ink">
+                  {s.step}
+                </span>
+                <span class="font-pixel text-[10px] text-ink-faint font-bold uppercase">
+                  PAS {s.step}
+                </span>
+              </div>
+              <h4 class="font-pixel text-base font-bold text-ink mb-1.5">
+                {s.title}
+              </h4>
+              <p class="text-xs sm:text-sm text-ink-soft leading-relaxed font-medium">
+                {s.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- The 7-Day Certificate Expiration Alert Box -->
+    <div class="max-w-4xl mx-auto bg-quest-warning border-3 border-ink rounded-3xl p-6 sm:p-8 shadow-hard space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-white border-2 border-ink rounded-2xl flex items-center justify-center text-2xl shadow-hard-sm shrink-0">
+          ⏳
+        </div>
+        <div>
+          <h3 class="font-pixel text-xl sm:text-2xl font-bold text-ink">
+            {t.iosGuide.expiryWarningTitle}
+          </h3>
+          <span class="text-xs font-pixel font-bold text-arcade-red uppercase tracking-wider">
+            Política oficial de seguretat d'Apple
+          </span>
+        </div>
+      </div>
+
+      <p class="text-sm sm:text-base text-ink leading-relaxed font-medium">
+        {t.iosGuide.expiryWarningText}
+      </p>
+
+      <div class="bg-white/90 border-2 border-ink rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-ink-soft leading-relaxed font-medium space-y-2">
+        <strong class="font-pixel text-forest block text-sm">
+          🛡️ {locale === 'ca' ? 'Solució i tranquil·litat:' : locale === 'es' ? 'Solución y tranquilidad:' : 'Solution & peace of mind:'}
+        </strong>
+        <p>
+          {t.iosGuide.expirySolution}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

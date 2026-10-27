@@ -1,0 +1,159 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="docs" class="py-16 md:py-24 bg-parchment border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="font-pixel text-xs font-bold text-forest">ARQUITECTURA & TEORIA</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.docs.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.docs.subtitle}
+      </p>
+    </div>
+
+    <!-- 3 Tech Pillar Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-14">
+      
+      <!-- Card 1: Edge ML -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-7 shadow-hard flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-forest-light border-2 border-ink rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-hard-sm">
+            ⚡
+          </div>
+          <h3 class="font-pixel text-xl font-bold text-ink mb-2">
+            {t.docs.edgeMlTitle}
+          </h3>
+          <p class="text-sm text-ink-soft leading-relaxed font-medium mb-4">
+            {t.docs.edgeMlDesc}
+          </p>
+
+          <ul class="space-y-2 text-xs font-pixel text-ink">
+            <li class="flex items-center gap-2">
+              <span class="text-forest">▸</span>
+              <span>Backbone MobileNetV3 / LiteRT</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest">▸</span>
+              <span>Quantització INT8 (reducció de ~120MB a ~15MB)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest">▸</span>
+              <span>Inferència ultra-ràpida ~30ms a la CPU del dispositiu</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest">▸</span>
+              <span>Head desacoblat per a taxonomia jeràrquica</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-ink/15 text-[11px] font-pixel text-forest font-bold">
+          TOTALMENT AUTÒNOM SENSE SERVIDORS
+        </div>
+      </div>
+
+      <!-- Card 2: Offline SQLite Drift -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-7 shadow-hard flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-quest-light border-2 border-ink rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-hard-sm">
+            🔒
+          </div>
+          <h3 class="font-pixel text-xl font-bold text-ink mb-2">
+            {t.docs.offlineDbTitle}
+          </h3>
+          <p class="text-sm text-ink-soft leading-relaxed font-medium mb-4">
+            {t.docs.offlineDbDesc}
+          </p>
+
+          <ul class="space-y-2 text-xs font-pixel text-ink">
+            <li class="flex items-center gap-2">
+              <span class="text-quest-amber">▸</span>
+              <span>SQLite reactiu tipat mitjançant Drift ORM</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-quest-amber">▸</span>
+              <span>Migracions de base de dades sense pèrdua de dades</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-quest-amber">▸</span>
+              <span>Zero telemetria, zero analítica, zero cookies</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-quest-amber">▸</span>
+              <span>Protecció estricta de les clapes i coordenades</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-ink/15 text-[11px] font-pixel text-quest-amber font-bold">
+          LES TEVES CLAPES NOMÉS SÓN TEVES
+        </div>
+      </div>
+
+      <!-- Card 3: Foraging Ethics -->
+      <div class="bg-white border-2.5 border-ink rounded-3xl p-6 sm:p-7 shadow-hard flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-parchment-light border-2 border-ink rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-hard-sm">
+            🧺
+          </div>
+          <h3 class="font-pixel text-xl font-bold text-ink mb-2">
+            {t.docs.ethicsTitle}
+          </h3>
+          <p class="text-sm text-ink-soft leading-relaxed font-medium mb-4">
+            {t.docs.ethicsDesc}
+          </p>
+
+          <ul class="space-y-2 text-xs font-pixel text-ink">
+            <li class="flex items-center gap-2">
+              <span class="text-forest-pine">▸</span>
+              <span>Cistell de vímet obligatori per dispersar espores</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest-pine">▸</span>
+              <span>Tall net amb ganivet o extracció suau tapant el forat</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest-pine">▸</span>
+              <span>Mai fer malbé bolets no comestibles o verinosos</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-forest-pine">▸</span>
+              <span>Respecta el sotabosc i la fauna autòctona</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-ink/15 text-[11px] font-pixel text-forest-pine font-bold">
+          COMPROMÍS AMB LA NATURA CATALANA
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Retro Quote / Forest Spirit Box -->
+    <div class="bg-[#FAF8F2] border-2.5 border-ink rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto shadow-hard-sm">
+      <p class="font-pixel text-lg sm:text-xl text-ink font-bold leading-relaxed">
+        «Al bosc no hi som sols: formem part de la xarxa que connecta el miceli amb les arrels dels pins i dels roures.»
+      </p>
+      <span class="text-xs font-pixel text-forest font-bold block mt-2">
+        — Principi ecològic de Boscdex
+      </span>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,276 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+import { MUSHROOMS } from '../data/species';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+
+// Edibility styling helper
+const getEdibilityBadge = (edibility: string) => {
+  switch (edibility) {
+    case 'excellent':
+      return { label: locale === 'ca' ? 'Excel·lent' : locale === 'es' ? 'Excelente' : 'Choice Edible', bg: 'bg-forest text-white border-forest' };
+    case 'comestible':
+      return { label: locale === 'ca' ? 'Comestible' : locale === 'es' ? 'Comestible' : 'Edible', bg: 'bg-[#EEF5EA] text-forest border-forest' };
+    case 'sense_valor':
+      return { label: locale === 'ca' ? 'Sense valor' : locale === 'es' ? 'Sin valor' : 'Inedible', bg: 'bg-parchment-light text-ink-soft border-ink-soft' };
+    case 'toxic':
+      return { label: locale === 'ca' ? 'Tòxic' : locale === 'es' ? 'Tóxico' : 'Toxic', bg: 'bg-quest-warning text-quest-amber border-quest-amber' };
+    case 'mortal':
+      return { label: locale === 'ca' ? '☠️ MORTAL' : locale === 'es' ? '☠️ MORTAL' : '☠️ LETHAL', bg: 'bg-arcade-danger text-arcade-red border-arcade-red animate-pulse' };
+    default:
+      return { label: edibility, bg: 'bg-parchment text-ink border-ink' };
+  }
+};
+
+// Rarity color helper
+const getRarityBorder = (tier: number) => {
+  switch (tier) {
+    case 1: return 'border-amber-700/60 bg-amber-50/40'; // Bronze
+    case 2: return 'border-slate-400 bg-slate-50/40'; // Silver
+    case 3: return 'border-yellow-500 bg-yellow-50/40'; // Gold
+    case 4: return 'border-purple-500 bg-purple-50/40'; // Purple
+    case 5: return 'border-cyan-500 bg-cyan-50/40 ring-2 ring-cyan-400/40'; // Legendary
+    default: return 'border-ink bg-white';
+  }
+};
+---
+
+<section id="species" class="py-16 md:py-24 bg-[#F5F3EB] border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="w-2 h-2 rounded-full bg-forest animate-pulse"></span>
+        <span class="font-pixel text-xs font-bold text-forest">75 ESPÈCIES AUTÒCTONES</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.dex.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.dex.subtitle}
+      </p>
+
+      <!-- Search Bar -->
+      <div class="mt-6 max-w-xl mx-auto">
+        <div class="relative">
+          <input
+            type="text"
+            id="species-search"
+            placeholder={t.dex.searchPlaceholder}
+            class="w-full pl-11 pr-4 py-3 bg-white border-2.5 border-ink rounded-2xl shadow-hard-sm font-pixel text-sm text-ink placeholder:text-ink-faint focus:outline-none focus:ring-2 focus:ring-forest"
+          />
+          <span class="absolute left-4 top-3.5 text-base">🔍</span>
+        </div>
+      </div>
+
+      <!-- Filter Buttons matching the app (Tots, Comestibles, Gourmet, Tòxics/mortals, Arbres socis) -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-6" id="dex-filters">
+        <button
+          type="button"
+          data-filter="all"
+          class="filter-btn active px-3.5 py-1.5 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-forest text-white shadow-arcade-btn"
+        >
+          {t.dex.filters.all}
+        </button>
+        <button
+          type="button"
+          data-filter="edible"
+          class="filter-btn px-3.5 py-1.5 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-ink shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.dex.filters.edible}
+        </button>
+        <button
+          type="button"
+          data-filter="gourmet"
+          class="filter-btn px-3.5 py-1.5 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-quest-amber shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.dex.filters.gourmet}
+        </button>
+        <button
+          type="button"
+          data-filter="toxic"
+          class="filter-btn px-3.5 py-1.5 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-arcade-red shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.dex.filters.toxic}
+        </button>
+        <button
+          type="button"
+          data-filter="trees"
+          class="filter-btn px-3.5 py-1.5 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-forest-pine shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.dex.filters.trees}
+        </button>
+      </div>
+
+      <!-- Counter display -->
+      <div class="mt-3 text-xs font-pixel text-ink-soft">
+        <span id="showing-counter">{MUSHROOMS.length}</span> {locale === 'ca' ? 'bolets al catàleg' : locale === 'es' ? 'setas en el catálogo' : 'species in catalog'}
+      </div>
+    </div>
+
+    <!-- 75 Mushrooms Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="mushrooms-grid">
+      {MUSHROOMS.map((m) => {
+        const edibilityBadge = getEdibilityBadge(m.edibility);
+        const rarityClass = getRarityBorder(m.rarityTier);
+        const isEdible = m.edibility === 'excellent' || m.edibility === 'comestible';
+        const isToxic = m.edibility === 'toxic' || m.edibility === 'mortal';
+        const hasTrees = m.hostTrees && m.hostTrees.length > 0;
+
+        return (
+          <div
+            data-category={isEdible ? 'edible' : isToxic ? 'toxic' : 'other'}
+            data-gourmet={m.isGourmet ? 'true' : 'false'}
+            data-trees={hasTrees ? 'true' : 'false'}
+            data-search={`${m.name[locale].toLowerCase()} ${m.scientificName.toLowerCase()} ${m.dexNumber.toLowerCase()}`}
+            class={`mushroom-card bg-white border-2 border-ink rounded-2xl p-4 shadow-hard hover:shadow-hard-lg hover:-translate-y-1 transition-all flex flex-col justify-between group ${rarityClass}`}
+          >
+            <div>
+              <!-- Card Top Strip -->
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-pixel text-[11px] font-bold px-2 py-0.5 bg-[#FAF8F2] border border-ink rounded text-forest">
+                  {m.dexNumber}
+                </span>
+                <div class="flex items-center gap-1">
+                  {m.isGourmet && (
+                    <span class="font-pixel text-[9px] font-bold px-1.5 py-0.2 bg-quest-warning text-quest-amber border border-quest-amber rounded">
+                      GOURMET
+                    </span>
+                  )}
+                  <span class={`font-pixel text-[10px] font-bold px-1.5 py-0.5 rounded border ${edibilityBadge.bg}`}>
+                    {edibilityBadge.label}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Mushroom Photo Frame -->
+              <div class="bg-[#FAF8F2] border-2 border-ink rounded-xl p-3 my-1.5 flex items-center justify-center relative overflow-hidden group-hover:bg-[#EEF5EA] transition-colors">
+                <img
+                  src={m.image}
+                  alt={m.name[locale]}
+                  class="w-24 h-24 sm:w-28 sm:h-28 object-contain filter drop-shadow group-hover:scale-105 transition-transform"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Names -->
+              <div class="mt-2">
+                <div class="flex items-start justify-between gap-1">
+                  <h3 class="font-pixel text-base font-bold text-ink leading-tight">
+                    {m.name[locale]}
+                  </h3>
+                  <span class="text-[9px] font-pixel font-bold px-1 py-0.2 bg-[#FAF8F2] border border-ink/30 rounded text-ink-soft shrink-0">
+                    {m.rarityName[locale]}
+                  </span>
+                </div>
+                <p class="text-[11px] text-ink-soft italic font-serif mt-0.5 truncate">
+                  {m.scientificName}
+                </p>
+              </div>
+
+              <!-- Habitat & Season -->
+              <div class="mt-3 pt-2.5 border-t border-ink/10 space-y-1 text-[11px]">
+                <div class="flex items-center gap-1 text-ink-soft">
+                  <span class="text-forest font-pixel font-bold">📅 {t.dex.season}:</span>
+                  <span>{m.season[locale]}</span>
+                </div>
+                <div class="flex items-center gap-1 text-ink-soft">
+                  <span class="text-forest font-pixel font-bold">⛰️ Altitud:</span>
+                  <span>{m.elevation}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toxic Warning if lookalike exists -->
+            {m.toxicLookalike && (
+              <div class="mt-3 pt-2 border-t border-ink/10">
+                <div class="p-1.5 bg-arcade-danger border border-arcade-red rounded-lg text-[10px] flex items-center justify-between">
+                  <span class="font-pixel font-bold text-arcade-red truncate">
+                    ⚠️ {m.toxicLookalike.dangerLevel === 'deadly' ? '☠️ Confusió mortal:' : 'Confusió:'} {m.toxicLookalike.name[locale]}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function setupDexSearchAndFilters() {
+    const searchInput = document.getElementById('species-search') as HTMLInputElement;
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('#dex-filters .filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.mushroom-card');
+    const counterEl = document.getElementById('showing-counter');
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function applyFilters() {
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const isGourmet = card.getAttribute('data-gourmet') === 'true';
+        const hasTrees = card.getAttribute('data-trees') === 'true';
+        const searchMeta = card.getAttribute('data-search') || '';
+
+        // Category match
+        let matchesCat = false;
+        if (currentFilter === 'all') matchesCat = true;
+        else if (currentFilter === 'edible' && cat === 'edible') matchesCat = true;
+        else if (currentFilter === 'gourmet' && isGourmet) matchesCat = true;
+        else if (currentFilter === 'toxic' && cat === 'toxic') matchesCat = true;
+        else if (currentFilter === 'trees' && hasTrees) matchesCat = true;
+
+        // Search match
+        const matchesSearch = currentSearch === '' || searchMeta.includes(currentSearch);
+
+        if (matchesCat && matchesSearch) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (counterEl) counterEl.textContent = String(visible);
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = (e.target as HTMLInputElement).value.toLowerCase().trim();
+        applyFilters();
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if ((window as any).playSfx) (window as any).playSfx('blip');
+
+        currentFilter = btn.getAttribute('data-filter') || 'all';
+
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-forest', 'text-white');
+          b.classList.add('bg-white', 'text-ink');
+        });
+        btn.classList.add('bg-forest', 'text-white');
+        btn.classList.remove('bg-white', 'text-ink');
+
+        applyFilters();
+      });
+    });
+  }
+
+  setupDexSearchAndFilters();
+</script>

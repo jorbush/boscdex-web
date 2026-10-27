@@ -1,0 +1,432 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="preview" class="py-16 md:py-24 bg-[#FAF8F2] border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="font-pixel text-xs font-bold text-forest">CAPTURA REAL DE L'APLICACIÓ</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.interactivePreview.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.interactivePreview.subtitle}
+      </p>
+
+      <!-- Screen Selector Tabs (Matching the 3 real app sections) -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8" id="screen-tabs">
+        <button
+          type="button"
+          data-tab="album"
+          class="tab-btn active px-4 py-2 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-forest text-white shadow-arcade-btn"
+        >
+          {t.interactivePreview.tabs.album}
+        </button>
+        <button
+          type="button"
+          data-tab="scanner"
+          class="tab-btn px-4 py-2 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-ink shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.interactivePreview.tabs.scanner}
+        </button>
+        <button
+          type="button"
+          data-tab="journal"
+          class="tab-btn px-4 py-2 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-ink shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.interactivePreview.tabs.journal}
+        </button>
+        <button
+          type="button"
+          data-tab="safety"
+          class="tab-btn px-4 py-2 font-pixel text-xs sm:text-sm font-bold rounded-xl retro-btn bg-white text-arcade-red shadow-arcade-btn hover:bg-parchment-light"
+        >
+          {t.interactivePreview.tabs.safety}
+        </button>
+      </div>
+    </div>
+
+    <!-- Handheld Phone Mockup Frame (Faithful 1:1 replica of the iOS App) -->
+    <div class="flex justify-center">
+      <div class="w-full max-w-[395px] bg-[#1E2822] p-3 rounded-[46px] border-4 border-ink shadow-hard-lg">
+        
+        <!-- Phone Bezel / Screen Housing -->
+        <div class="bg-[#F5F3EB] rounded-[38px] overflow-hidden border-2 border-ink flex flex-col h-[670px] relative">
+          
+          <!-- iOS Status Bar & Dynamic Island -->
+          <div class="bg-[#F5F3EB] px-6 pt-3 pb-1 flex items-center justify-between z-30 select-none">
+            <span class="font-sans text-xs font-bold text-ink">18:26</span>
+            
+            <!-- Dynamic Island -->
+            <div class="w-24 h-5 bg-black rounded-full flex items-center justify-end px-2">
+              <span class="w-2 h-2 rounded-full bg-[#1E2822]"></span>
+            </div>
+
+            <div class="flex items-center gap-1.5 text-ink text-xs font-bold">
+              <span>●●●</span>
+              <span>📶</span>
+              <span>🔋</span>
+            </div>
+          </div>
+
+          <!-- TAB 1: 🍄 BOSCDEX (1:1 with Screenshot 2) -->
+          <div id="view-album" class="screen-view flex-1 flex flex-col overflow-hidden">
+            
+            <!-- Top App Bar matching Screenshot 2 -->
+            <div class="bg-[#F5F3EB] px-3.5 pt-1 pb-2 border-b border-ink/10 flex items-center justify-between">
+              <!-- Left: Official Logo + Title + LVL pill + Subtitle -->
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full border-2 border-forest overflow-hidden bg-white shadow-sm shrink-0">
+                  <img src="/assets/icons/boscdex_logo.png" alt="Boscdex" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-pixel text-lg font-bold text-ink leading-tight">Boscdex</span>
+                    <span class="px-2 py-0.2 bg-[#2D6E44] text-white font-pixel text-[9px] font-bold rounded-full">
+                      LVL 5
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-1.5 mt-0.5">
+                    <span class="font-pixel text-[10px] text-ink-soft">4/75 descoberts</span>
+                    <!-- 8 Segmented Dots -->
+                    <div class="flex gap-0.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#D5DFD1]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#D5DFD1]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#D5DFD1]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#D5DFD1]"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Settings Gear + Golden Trophy Badge -->
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-white border border-ink flex items-center justify-center text-xs shadow-sm">
+                  ⚙️
+                </div>
+                <div class="w-8 h-8 rounded-full bg-[#E5A93C] border border-ink flex items-center justify-center text-xs shadow-sm">
+                  🏆
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-Dex Mode Switcher (Bolets / Arbres) -->
+            <div class="px-3 pt-2">
+              <div class="grid grid-cols-2 gap-1 p-1 bg-[#EEF5EA] border-2 border-ink rounded-xl">
+                <button class="py-1 px-2 font-pixel text-xs font-bold rounded-lg bg-forest text-white flex items-center justify-center gap-1.5">
+                  <span>🍄</span> Bolets
+                </button>
+                <button class="py-1 px-2 font-pixel text-xs font-bold rounded-lg text-ink-soft flex items-center justify-center gap-1.5 hover:bg-white/50">
+                  <span>🌲</span> Arbres
+                </button>
+              </div>
+            </div>
+
+            <!-- Filter Chips Row (Tots, Comestibles, Gourmet, Tòxics/mortals, Arbres socis) -->
+            <div class="px-3 py-2 overflow-x-auto flex gap-1.5 no-scrollbar text-[11px] font-pixel font-bold">
+              <span class="px-3 py-0.5 bg-forest text-white border border-ink rounded-full shrink-0">Tots</span>
+              <span class="px-3 py-0.5 bg-white border border-ink rounded-full text-ink shrink-0">Comestibles</span>
+              <span class="px-3 py-0.5 bg-white border border-ink rounded-full text-ink shrink-0">Gourmet</span>
+              <span class="px-3 py-0.5 bg-white border border-ink rounded-full text-ink shrink-0">Tòxics/mortals</span>
+              <span class="px-3 py-0.5 bg-white border border-ink rounded-full text-ink shrink-0">Arbres socis</span>
+            </div>
+
+            <!-- 3-Column Grid matching Screenshot 2! -->
+            <div class="flex-1 overflow-y-auto px-3 pb-3">
+              <div class="grid grid-cols-3 gap-2">
+                
+                <!-- Card 1: #001 Rovelló (Discovered, Star Icon) -->
+                <div class="bg-white border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between relative overflow-hidden">
+                  <div class="absolute top-1 right-1 w-4 h-4 rounded-full bg-forest-light border border-forest text-forest text-[9px] flex items-center justify-center font-bold">
+                    ★
+                  </div>
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/mushrooms/lactarius_deliciosus.png" alt="Rovelló" class="w-12 h-12 object-contain" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15 text-left">
+                    <span class="font-pixel text-[9px] text-ink-faint font-bold block leading-none">#001</span>
+                    <span class="font-pixel text-[10px] font-bold text-ink truncate block">Rovelló / ...</span>
+                  </div>
+                </div>
+
+                <!-- Card 2: #002 ??? (Undiscovered, Mint Card + Dark Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#002 ???</span>
+                  </div>
+                </div>
+
+                <!-- Card 3: #003 Rossinyol (Discovered, Star Icon) -->
+                <div class="bg-white border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between relative overflow-hidden">
+                  <div class="absolute top-1 right-1 w-4 h-4 rounded-full bg-forest-light border border-forest text-forest text-[9px] flex items-center justify-center font-bold">
+                    ★
+                  </div>
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/mushrooms/cantharellus_cibarius.png" alt="Rossinyol" class="w-12 h-12 object-contain" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15 text-left">
+                    <span class="font-pixel text-[9px] text-ink-faint font-bold block leading-none">#003</span>
+                    <span class="font-pixel text-[10px] font-bold text-ink truncate block">Rossinyol</span>
+                  </div>
+                </div>
+
+                <!-- Card 4: #004 ??? (Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#004 ???</span>
+                  </div>
+                </div>
+
+                <!-- Card 5: #005 ??? (Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#005 ???</span>
+                  </div>
+                </div>
+
+                <!-- Card 6: #006 ??? (Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#006 ???</span>
+                  </div>
+                </div>
+
+                <!-- Card 7: #007 Fredolic (Discovered, Cutlery Icon) -->
+                <div class="bg-white border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between relative overflow-hidden">
+                  <div class="absolute top-1 right-1 w-4 h-4 rounded-full bg-forest-light border border-forest text-forest text-[9px] flex items-center justify-center font-bold">
+                    🍴
+                  </div>
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/mushrooms/tricholoma_terreum.png" alt="Fredolic" class="w-12 h-12 object-contain" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15 text-left">
+                    <span class="font-pixel text-[9px] text-ink-faint font-bold block leading-none">#007</span>
+                    <span class="font-pixel text-[10px] font-bold text-ink truncate block">Fredolic</span>
+                  </div>
+                </div>
+
+                <!-- Card 8: #008 ??? (Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#008 ???</span>
+                  </div>
+                </div>
+
+                <!-- Card 9: #009 ??? (Silhouette) -->
+                <div class="bg-[#DFE8DC] border-2 border-ink rounded-xl p-1.5 shadow-sm text-center flex flex-col justify-between">
+                  <div class="h-14 flex items-center justify-center my-0.5">
+                    <img src="/assets/silhouettes/generic_mushroom.png" alt="Silhouette" class="w-11 h-11 object-contain brightness-0 opacity-85" />
+                  </div>
+                  <div class="pt-1 border-t border-ink/15">
+                    <span class="font-pixel text-[10px] text-ink-soft font-bold block">#009 ???</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TAB 2: 📸 ESCANEJAR (Live Edge AI Viewfinder) -->
+          <div id="view-scanner" class="screen-view hidden flex-1 flex flex-col overflow-y-auto p-3 space-y-3">
+            <div class="relative bg-black rounded-2xl overflow-hidden border-2 border-ink h-64 scanlines flex items-center justify-center">
+              <img
+                src="/assets/mushrooms/lactarius_deliciosus.png"
+                alt="Target"
+                class="w-36 h-36 object-contain filter drop-shadow z-0"
+              />
+              <div class="absolute inset-4 border-2 border-white/60 rounded-xl pointer-events-none flex flex-col justify-between p-2">
+                <div class="flex justify-between items-center text-[10px] font-pixel text-white/90">
+                  <span class="bg-forest px-1.5 py-0.5 rounded border border-white/40">● EDGE-AI ACTIVE</span>
+                  <span class="bg-ink/80 px-1.5 py-0.5 rounded border border-white/30">⚡ 31ms</span>
+                </div>
+                <div class="self-center w-8 h-8 border-2 border-quest-gold/80 rounded-full flex items-center justify-center">
+                  <span class="w-1.5 h-1.5 bg-quest-gold rounded-full"></span>
+                </div>
+                <div class="flex justify-between items-center text-[10px] font-pixel text-white/80">
+                  <span>RES: 270x270</span>
+                  <span>OFFLINE GPS: ✓</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result Sheet -->
+            <div class="bg-white border-2 border-ink rounded-xl p-3 shadow-sm space-y-2">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="font-pixel text-[10px] font-bold text-forest uppercase">Edge AI Neural Match</span>
+                  <h4 class="font-pixel text-sm font-bold text-ink">Rovelló / Pinetell</h4>
+                  <p class="text-[10px] text-ink-soft italic">Lactarius deliciosus</p>
+                </div>
+                <span class="px-2 py-0.5 bg-forest text-white font-pixel text-[10px] font-bold rounded">
+                  94.2% CERT
+                </span>
+              </div>
+              <div class="h-2 w-full bg-[#D5DFD1] border border-ink rounded-full overflow-hidden">
+                <div class="h-full bg-forest rounded-full" style="width: 94%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: 📓 DIARI (Field Journal & Catalonia Map) -->
+          <div id="view-journal" class="screen-view hidden flex-1 flex flex-col overflow-y-auto p-3 space-y-3">
+            <div class="relative bg-[#386B85]/20 rounded-2xl overflow-hidden border-2 border-ink h-64">
+              <img
+                src="/assets/map/catalonia_pixel_map.jpg"
+                alt="Mapa Catalunya"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute top-2 left-2 bg-white/90 border border-ink rounded-lg px-2 py-1 text-[10px] font-pixel">
+                <span class="font-bold text-ink block">📍 42.18° N, 1.85° E</span>
+                <span class="text-ink-soft">⛰️ 1.150 m (Ripollès)</span>
+              </div>
+              <div class="absolute bottom-2 right-2 bg-forest text-white border border-ink rounded px-2 py-0.5 text-[9px] font-pixel font-bold">
+                🔒 GPS 100% LOCAL
+              </div>
+            </div>
+
+            <div class="bg-white border-2 border-ink rounded-xl p-2.5 shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="/assets/mushrooms/boletus_edulis.png" alt="Cep" class="w-8 h-8 object-contain" />
+                <div>
+                  <span class="font-pixel text-xs font-bold text-ink block">Cep (Boletus edulis)</span>
+                  <span class="text-[10px] text-ink-soft">Fageda d'en Jordà • Fa 2 hores</span>
+                </div>
+              </div>
+              <span class="font-pixel text-[10px] font-bold text-forest bg-forest-light px-2 py-0.5 rounded border border-forest">
+                92% certesa
+              </span>
+            </div>
+          </div>
+
+          <!-- TAB 4: ⚠️ SEGURETAT (Toxic Twin Alert) -->
+          <div id="view-safety" class="screen-view hidden flex-1 flex flex-col overflow-y-auto p-3 space-y-3">
+            <div class="bg-arcade-danger border-2 border-arcade-red rounded-xl p-3 shadow-sm space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-arcade-red animate-ping"></span>
+                <span class="font-pixel text-xs font-bold text-arcade-red">ALERTA DE CONFUSIÓ PERILLOSA</span>
+              </div>
+              <p class="text-xs text-ink font-semibold">
+                Rovelló vs Fals Rovelló (Lactarius chrysorrheus)
+              </p>
+            </div>
+
+            <div class="bg-white border-2 border-ink rounded-xl p-3 space-y-2 text-xs">
+              <div class="grid grid-cols-2 gap-2 text-center">
+                <div class="p-2 bg-forest-light border border-forest rounded-lg">
+                  <span class="font-pixel text-[9px] font-bold text-forest block">COMESTIBLE</span>
+                  <span class="font-pixel text-xs font-bold text-ink block">Rovelló</span>
+                  <span class="text-[9px] text-ink-soft">Làtex taronja immutable</span>
+                </div>
+                <div class="p-2 bg-arcade-danger border border-arcade-red rounded-lg">
+                  <span class="font-pixel text-[9px] font-bold text-arcade-red block">☠️ TÒXIC</span>
+                  <span class="font-pixel text-xs font-bold text-arcade-red block">Fals rovelló</span>
+                  <span class="text-[9px] text-ink-soft">Làtex blanc a groc sofre</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Retro Navigation Bar (EXACTLY 3 Tabs matching Screenshot 2!) -->
+          <div class="bg-[#FAF8F2] border-t-2 border-ink px-6 py-2.5 flex items-center justify-between z-30 select-none">
+            
+            <!-- Tab 1: Boscdex (Red Handheld Console) -->
+            <button class="flex flex-col items-center group cursor-pointer text-forest" onclick="switchMockupTab('album')">
+              <span class="text-xl leading-none">🎮</span>
+              <span class="font-pixel text-[10px] font-bold mt-1 text-forest">Boscdex</span>
+            </button>
+
+            <!-- Tab 2: Escanejar (Camera) -->
+            <button class="flex flex-col items-center group cursor-pointer text-ink-soft hover:text-ink" onclick="switchMockupTab('scanner')">
+              <span class="text-xl leading-none opacity-80 group-hover:opacity-100">📷</span>
+              <span class="font-pixel text-[10px] font-bold mt-1">Escanejar</span>
+            </button>
+
+            <!-- Tab 3: Diari (Journal Notebook) -->
+            <button class="flex flex-col items-center group cursor-pointer text-ink-soft hover:text-ink" onclick="switchMockupTab('journal')">
+              <span class="text-xl leading-none opacity-80 group-hover:opacity-100">📓</span>
+              <span class="font-pixel text-[10px] font-bold mt-1">Diari</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function setupMockupTabs() {
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('#screen-tabs .tab-btn');
+    const views = document.querySelectorAll<HTMLElement>('.screen-view');
+
+    function setActiveTab(targetTab: string) {
+      if ((window as any).playSfx) (window as any).playSfx('blip');
+
+      tabButtons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-tab') === targetTab;
+        if (isMatch) {
+          btn.classList.add('bg-forest', 'text-white');
+          btn.classList.remove('bg-white', 'text-ink', 'text-arcade-red');
+        } else {
+          btn.classList.remove('bg-forest', 'text-white');
+          btn.classList.add('bg-white', 'text-ink');
+        }
+      });
+
+      views.forEach(view => {
+        const viewId = `view-${targetTab}`;
+        if (view.id === viewId) {
+          view.classList.remove('hidden');
+        } else {
+          view.classList.add('hidden');
+        }
+      });
+    }
+
+    (window as any).switchMockupTab = setActiveTab;
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        if (tab) setActiveTab(tab);
+      });
+    });
+  }
+
+  setupMockupTabs();
+</script>

@@ -1,0 +1,122 @@
+---
+import type { Locale } from '../i18n/translations';
+import { INDICATOR_TREES } from '../data/species';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const titles = {
+  ca: {
+    badge: 'ECOLOGIA SIMBIÒTICA',
+    title: 'Els 5 Arbres Indicadors de Catalunya',
+    subtitle: 'Qui coneix els arbres del bosc, troba els millors bolets. Aprèn les relacions micorrizines que fan bategar la natura.',
+    elevationLabel: 'Altitud',
+    partnersLabel: 'Bolets socis',
+    needle: 'Agulla (Conífera)',
+    deciduous: 'Caduca (Planifoli)',
+    evergreen: 'Perenne (Esclerofil·le)',
+  },
+  es: {
+    badge: 'ECOLOGÍA SIMBIÓTICA',
+    title: 'Los 5 Árboles Indicadores de Cataluña',
+    subtitle: 'Quien conoce los árboles del bosque, encuentra las mejores setas. Aprende las relaciones micorrícicas que hacen latir la naturaleza.',
+    elevationLabel: 'Altitud',
+    partnersLabel: 'Setas socias',
+    needle: 'Aguja (Conífera)',
+    deciduous: 'Caduca (Caducifolio)',
+    evergreen: 'Perenne (Esclerófilo)',
+  },
+  en: {
+    badge: 'SYMBIOTIC ECOLOGY',
+    title: 'Catalonia\'s 5 Mycorrhizal Indicator Trees',
+    subtitle: 'Mastering forest trees unlocks the secrets of mushroom hunting. Discover the subterranean partnerships that sustain life.',
+    elevationLabel: 'Elevation',
+    partnersLabel: 'Symbiotic Fungi',
+    needle: 'Needle (Conifer)',
+    deciduous: 'Deciduous Broadleaf',
+    evergreen: 'Evergreen Sclerophyll',
+  },
+};
+
+const t = titles[locale];
+---
+
+<section id="trees" class="py-16 md:py-24 bg-parchment border-b-2.5 border-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border-2 border-ink rounded-full shadow-hard-sm mb-3">
+        <span class="font-pixel text-xs font-bold text-forest">{t.badge}</span>
+      </div>
+      <h2 class="font-pixel text-3xl sm:text-4xl lg:text-5xl font-bold text-ink tracking-tight">
+        {t.title}
+      </h2>
+      <p class="mt-3 text-base sm:text-lg text-ink-soft font-medium">
+        {t.subtitle}
+      </p>
+    </div>
+
+    <!-- Trees Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {INDICATOR_TREES.map((tree) => (
+        <div class="bg-white border-2.5 border-ink rounded-3xl p-6 shadow-hard hover:shadow-hard-lg hover:-translate-y-1 transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Top Tag -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-pixel text-xs font-bold px-2 py-0.5 bg-[#FAF8F2] border border-ink rounded-md text-forest">
+                {tree.leafType === 'needle' ? t.needle : tree.leafType === 'deciduous' ? t.deciduous : t.evergreen}
+              </span>
+              <span class="text-xs font-pixel text-ink-soft">
+                ⛰️ {tree.elevation}
+              </span>
+            </div>
+
+            <!-- Tree Illustration Frame -->
+            <div class="bg-[#EEF5EA] border-2 border-ink rounded-2xl p-4 my-2 flex items-center justify-center group-hover:bg-forest-light transition-colors">
+              <img
+                src={tree.image}
+                alt={tree.name[locale]}
+                class="w-36 h-36 object-contain filter drop-shadow group-hover:scale-105 transition-transform"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Tree Names -->
+            <div class="mt-3">
+              <h3 class="font-pixel text-xl font-bold text-ink">
+                {tree.name[locale]}
+              </h3>
+              <p class="text-xs text-ink-soft italic font-serif">
+                {tree.scientificName}
+              </p>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-ink-soft mt-3 leading-relaxed font-medium">
+              {tree.description[locale]}
+            </p>
+          </div>
+
+          <!-- Symbiotic Tag Strip -->
+          <div class="mt-5 pt-4 border-t-2 border-ink/10">
+            <span class="font-pixel text-xs font-bold text-forest block mb-1.5">
+              🍄 {t.partnersLabel}:
+            </span>
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-pixel">
+              {tree.mycorrhizalPartners.map((p) => (
+                <span class="px-2 py-0.5 bg-[#FAF8F2] border border-ink/30 rounded text-ink-soft">
+                  {p.replace(/_/g, ' ')}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

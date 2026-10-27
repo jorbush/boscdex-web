@@ -1,0 +1,163 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section class="relative overflow-hidden pt-10 pb-16 md:pt-16 md:pb-24 border-b-2.5 border-ink bg-[#F5F3EB]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <!-- Offline & Open Source Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-forest-light border-2 border-ink rounded-full shadow-hard-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-forest animate-pulse"></span>
+          <span class="font-pixel text-xs sm:text-sm font-bold text-forest-pine tracking-wide">
+            {t.hero.badge}
+          </span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-pixel text-3xl sm:text-5xl lg:text-6xl font-bold text-ink leading-[1.15] tracking-tight">
+          {t.hero.title} <span class="text-forest bg-forest-light px-2.5 py-0.5 rounded-xl border-2 border-ink shadow-hard-sm inline-block rotate-[-1deg]">{t.hero.titleHighlight}</span>
+        </h1>
+
+        <!-- Subtitle / Mission - High Contrast Clean Background -->
+        <div class="bg-white/80 border-2 border-ink/20 rounded-2xl p-4 sm:p-5 shadow-sm max-w-2xl mx-auto lg:mx-0">
+          <p class="text-base sm:text-lg text-ink leading-relaxed font-medium">
+            {t.hero.description}
+          </p>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+          
+          <!-- Download APK Primary Button -->
+          <a
+            href="#download"
+            onclick="window.playSfx && window.playSfx('badge')"
+            class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-forest text-white font-pixel font-bold text-base sm:text-lg rounded-2xl retro-btn hover:bg-forest-pine group shadow-arcade-btn"
+          >
+            <svg class="w-5 h-5 fill-current group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            <span>{t.hero.downloadApk}</span>
+          </a>
+
+          <!-- iOS Guide Button -->
+          <a
+            href="#ios-guide"
+            onclick="window.playSfx && window.playSfx('blip')"
+            class="inline-flex items-center gap-2 px-5 py-3.5 bg-white text-ink font-pixel font-bold text-base rounded-2xl retro-btn hover:bg-parchment-light shadow-arcade-btn border-2 border-ink"
+          >
+            <span>🍏</span>
+            <span>{t.hero.iosGuideBtn}</span>
+          </a>
+
+          <!-- GitHub Open Source Button -->
+          <a
+            href="https://github.com/jorbush/boscdex"
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="window.playSfx && window.playSfx('blip')"
+            class="inline-flex items-center gap-2 px-4 py-3.5 bg-[#FAF8F2] text-ink-soft hover:text-ink font-pixel font-bold text-sm rounded-2xl border-2 border-ink shadow-hard-sm"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+          <div class="bg-white border-2 border-ink rounded-xl p-3 shadow-hard-sm text-center">
+            <span class="font-pixel text-2xl font-bold text-forest block">{t.hero.stats.species}</span>
+            <span class="text-xs text-ink-soft font-semibold">{t.hero.stats.speciesLabel}</span>
+          </div>
+          <div class="bg-white border-2 border-ink rounded-xl p-3 shadow-hard-sm text-center">
+            <span class="font-pixel text-2xl font-bold text-quest-amber block">{t.hero.stats.trees}</span>
+            <span class="text-xs text-ink-soft font-semibold">{t.hero.stats.treesLabel}</span>
+          </div>
+          <div class="bg-white border-2 border-ink rounded-xl p-3 shadow-hard-sm text-center">
+            <span class="font-pixel text-2xl font-bold text-arcade-red block">{t.hero.stats.lookalikes}</span>
+            <span class="text-xs text-ink-soft font-semibold">{t.hero.stats.lookalikesLabel}</span>
+          </div>
+          <div class="bg-white border-2 border-ink rounded-xl p-3 shadow-hard-sm text-center">
+            <span class="font-pixel text-2xl font-bold text-arcade-cyan block">{t.hero.stats.offline}</span>
+            <span class="text-xs text-ink-soft font-semibold">{t.hero.stats.offlineLabel}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Official App Emblem & Mascot Frame -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-sm sm:max-w-md">
+          
+          <!-- Frame Card -->
+          <div class="bg-[#FAF8F2] border-3 border-ink rounded-3xl p-5 shadow-hard-lg relative">
+            
+            <!-- Card Header HUD -->
+            <div class="flex items-center justify-between pb-3 border-b-2 border-ink mb-4">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full border-2 border-ink overflow-hidden bg-white">
+                  <img src="/assets/icons/boscdex_logo.png" alt="Boscdex" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <span class="font-pixel text-xs font-bold text-ink block leading-none">BOSCDEX APP</span>
+                  <span class="text-[9px] font-pixel text-forest font-bold">75 BOLETS • OFFLINE</span>
+                </div>
+              </div>
+              <div class="px-2.5 py-0.5 bg-forest-light border-2 border-ink rounded-full">
+                <span class="font-pixel text-xs font-bold text-forest">CATALUNYA v1.0</span>
+              </div>
+            </div>
+
+            <!-- Central Mascot Display -->
+            <div class="bg-[#EEF5EA] border-2 border-ink rounded-2xl p-6 text-center relative overflow-hidden group">
+              <img
+                src="/assets/icons/boscdex_mascot.png"
+                alt="Boscdex Mascot"
+                class="w-44 h-44 sm:w-52 sm:h-52 mx-auto object-contain filter drop-shadow-[0_8px_0_rgba(30,40,34,0.15)] group-hover:scale-105 transition-transform"
+              />
+              <div class="mt-2">
+                <span class="font-pixel text-base font-bold text-ink block">Mascota Boletaire</span>
+                <span class="text-xs text-ink-soft font-medium">L'esperit guardià del bosc i les clapes secretes</span>
+              </div>
+            </div>
+
+            <!-- Card Bottom Bar: Canonical App Emblem Spotlight -->
+            <div class="mt-4 bg-white border-2 border-ink rounded-xl p-3 flex items-center justify-between shadow-hard-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full border-2 border-forest overflow-hidden bg-parchment-light shrink-0">
+                  <img src="/assets/icons/boscdex_logo.png" alt="Logotip Oficial" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <span class="font-pixel text-xs font-bold text-ink block">Logotip Oficial de l'App</span>
+                  <span class="text-[11px] text-ink-soft font-medium">Símbol del Cep & Pi de Catalunya</span>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 text-[10px] font-pixel font-bold bg-forest text-white rounded">
+                CANÒNIC
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

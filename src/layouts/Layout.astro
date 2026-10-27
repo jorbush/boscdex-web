@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/icons/pixel_bolet.png" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{t.meta.title}</title>
+    <meta name="title" content={t.meta.title} />
+    <meta name="description" content={t.meta.description} />
+    <meta name="keywords" content="boscdex, bolets, setas, mushrooms, catalunya, catalonia, boletaires, offline, edgeml, tflite, pokedex, rovelló, cep, ou de reig" />
+    <meta name="author" content="Boscdex Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:image" content="/assets/icons/boscdex_logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={t.meta.title} />
+    <meta property="twitter:description" content={t.meta.description} />
+    <meta property="twitter:image" content="/assets/icons/boscdex_logo.png" />
+
+    <!-- Google Font fallback for Pixelify Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-parchment text-ink antialiased min-h-screen flex flex-col selection:bg-forest selection:text-white">
+    <Header locale={locale} />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>
