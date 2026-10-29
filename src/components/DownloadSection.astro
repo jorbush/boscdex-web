@@ -8,6 +8,11 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = translations[locale];
+
+// Direct official GitHub Releases download links (always resolve to the latest tagged release assets)
+const APK_ARM64_URL = 'https://github.com/jorbush/boscdex/releases/latest/download/app-arm64-v8a-release.apk';
+const APK_UNIVERSAL_URL = 'https://github.com/jorbush/boscdex/releases/latest/download/app-release.apk';
+const GITHUB_RELEASES_URL = 'https://github.com/jorbush/boscdex/releases';
 ---
 
 <section id="download" class="py-16 md:py-24 bg-[#FAF8F2] border-b-2.5 border-ink relative">
@@ -45,7 +50,7 @@ const t = translations[locale];
                 {t.download.arm64Title}
               </h3>
               <span class="text-xs font-pixel font-bold text-forest">
-                Release v1.0.0 • ~45 MB
+                Release v1.4.0 • ~30 MB
               </span>
             </div>
           </div>
@@ -57,8 +62,9 @@ const t = translations[locale];
 
         <div class="space-y-3 pt-4 border-t-2 border-ink/10">
           <a
-            href="/downloads/boscdex-arm64-v8a.apk"
-            download="boscdex-arm64-v8a.apk"
+            href={APK_ARM64_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onclick="window.playSfx && window.playSfx('badge')"
             class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-forest text-white font-pixel font-bold text-base rounded-2xl retro-btn hover:bg-forest-pine shadow-arcade-btn group"
           >
@@ -68,7 +74,7 @@ const t = translations[locale];
             <span>{t.download.btnDownload} (ARM64)</span>
           </a>
           <span class="text-[11px] font-pixel text-ink-faint block text-center">
-            SHA-256 verificable • Compatible amb el 99% dels Android actuals
+            Descàrrega directa oficial de GitHub Releases • Compatible amb 64-bit
           </span>
         </div>
       </div>
@@ -89,7 +95,7 @@ const t = translations[locale];
                 {t.download.universalTitle}
               </h3>
               <span class="text-xs font-pixel font-bold text-ink-soft">
-                Release v1.0.0 • ~102 MB
+                Release v1.4.0 • ~100 MB
               </span>
             </div>
           </div>
@@ -101,8 +107,9 @@ const t = translations[locale];
 
         <div class="space-y-3 pt-4 border-t-2 border-ink/10">
           <a
-            href="/downloads/boscdex-universal.apk"
-            download="boscdex-universal.apk"
+            href={APK_UNIVERSAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onclick="window.playSfx && window.playSfx('badge')"
             class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-white text-ink font-pixel font-bold text-base rounded-2xl retro-btn hover:bg-parchment-light shadow-arcade-btn group"
           >
@@ -112,7 +119,7 @@ const t = translations[locale];
             <span>{t.download.btnDownload} (Universal)</span>
           </a>
           <span class="text-[11px] font-pixel text-ink-faint block text-center">
-            Conté totes les arquitectures (armeabi-v7a, arm64-v8a, x86_64)
+            Descàrrega directa oficial • Bundled amb totes les CPU
           </span>
         </div>
       </div>
@@ -131,7 +138,7 @@ const t = translations[locale];
           </p>
         </div>
         <a
-          href="https://github.com/jorbush/boscdex/releases"
+          href={GITHUB_RELEASES_URL}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-forest-light text-forest-pine font-pixel font-bold text-sm rounded-xl retro-btn hover:bg-forest hover:text-white transition-colors"
